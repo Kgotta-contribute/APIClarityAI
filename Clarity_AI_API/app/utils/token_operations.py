@@ -42,7 +42,7 @@ class AuthConfig:
 
     algorithms = ["RS256"]
 
-    jwks_endpoint = os.environ.get('jwks_endpoint','https://portalssoqa.elevancehealth.com/oauth2/ausefjy7k3J5S1AXz297/v1/keys')
+    jwks_endpoint = os.environ.get('jwks_endpoint','https://portalssoqa.chhavi.com/oauth2/ausefjy7k3J5S1AXz297/v1/keys')
 
     client_id = os.environ.get('client_id', '0oa1163b2oflT4JIA298')
 
