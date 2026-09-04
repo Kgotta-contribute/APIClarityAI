@@ -13,7 +13,10 @@ from typing import Any, Callable, Optional
 from urllib import request
 from urllib.error import HTTPError, URLError
 
-import imageio_ffmpeg
+try:
+    import imageio_ffmpeg
+except ImportError:
+    imageio_ffmpeg = None
 
 from app.config.config import settings
 
@@ -366,7 +369,7 @@ def _transcribe_chunked(file_path: Path, language: Optional[str] = None) -> list
     Extracts 16kHz mono audio and slices at natural silence pauses (target ~60s chunks).
     Completely eliminates Whisper attention drift, boundary word clipping, and hallucinated repetition loops.
     """
-    ffmpeg_exe = imageio_ffmpeg.get_ffmpeg_exe()
+    ffmpeg_exe = imageio_ffmpeg.get_ffmpeg_exe() if imageio_ffmpeg else "ffmpeg"
     temp_full_wav = file_path.parent / f"extracted_{uuid.uuid4().hex[:8]}.wav"
 
     try:
