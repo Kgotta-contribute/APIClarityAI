@@ -1,0 +1,946 @@
+{
+  "model_dense": "BAAI/bge-small-en-v1.5",
+  "model_reranker": "BAAI/bge-reranker-base",
+  "generator_model": "openai/gpt-oss-20b",
+  "metrics": {
+    "evidence_recall_5": {
+      "score": "41/46",
+      "percentage": "89.1%"
+    },
+    "evidence_recall_10": {
+      "score": "46/46",
+      "percentage": "100.0%"
+    },
+    "grounded_answer_correctness": {
+      "score": "45/46",
+      "percentage": "97.8%"
+    },
+    "hallucination_resistance": {
+      "score": "4/4",
+      "percentage": "100.0%"
+    }
+  },
+  "questions": [
+    {
+      "id": 1,
+      "category": "A. Direct factual",
+      "question": "Why did Tom decide to delete Instagram?",
+      "stage1_rank": 1,
+      "stage2_reranked_rank": 1,
+      "reranker_score": 0.6099936090578195,
+      "dense_score": 0.746406502700434,
+      "lexical_score": 1.0,
+      "final_score": 0.7289187553390399,
+      "recall_5": true,
+      "recall_10": true,
+      "is_correct": true,
+      "answer": "Tom said he deleted Instagram because it had become an addiction that was \u201ctaking over\u201d his life and was negatively affecting his mental health. He felt he was constantly scrolling through a \u201cfalse version of his life,\u201d which made him obsessed with what people thought of him and turned into a problem that interfered with his work on set. To protect his mental health and stop the platform from controlling his thoughts and actions, he decided to step away and delete his account\u301003:21\u201103:33\u3011\u301012:48\u201113:06\u3011.",
+      "evidence_keywords": [
+        "addicted",
+        "false version",
+        "taking over",
+        "obsessed",
+        "scroll"
+      ]
+    },
+    {
+      "id": 2,
+      "category": "A. Direct factual",
+      "question": "What was Tom filming in New York when he was having a difficult time?",
+      "stage1_rank": 1,
+      "stage2_reranked_rank": 1,
+      "reranker_score": 0.7069116002745249,
+      "dense_score": 0.720969676971441,
+      "lexical_score": 0.8,
+      "final_score": 0.7297467032286947,
+      "recall_5": true,
+      "recall_10": true,
+      "is_correct": true,
+      "answer": "Tom was filming a **crowded room** in New\u202fYork when he said he was having a hard time.  \nThis is mentioned in the transcript at [01:27\u202f\u2013\u202f01:49] and again at [02:29\u202f\u2013\u202f02:47].",
+      "evidence_keywords": [
+        "crowded room",
+        "psychological thriller",
+        "shooting",
+        "protagonist"
+      ]
+    },
+    {
+      "id": 3,
+      "category": "A. Direct factual",
+      "question": "What did Tom say he was doing repeatedly while sitting in his chair on set?",
+      "stage1_rank": 1,
+      "stage2_reranked_rank": 2,
+      "reranker_score": 0.5191749461001828,
+      "dense_score": 0.667394936084747,
+      "lexical_score": 0.25,
+      "final_score": 0.5098059538755155,
+      "recall_5": true,
+      "recall_10": true,
+      "is_correct": true,
+      "answer": "Based on the transcript, Tom said that while on set, he would sit in his chair and just **\"scroll, scroll, scroll, scroll, scroll\"** (referring to scrolling through Instagram/social media) [03:42, 13:01]. He noted that this repetitive scrolling was taking over his thoughts and making it difficult for him to focus on his work.",
+      "evidence_keywords": [
+        "scroll",
+        "chair",
+        "set"
+      ]
+    },
+    {
+      "id": 4,
+      "category": "A. Direct factual",
+      "question": "What did Tom announce after deciding to step away from social media?",
+      "stage1_rank": 1,
+      "stage2_reranked_rank": 1,
+      "reranker_score": 0.6263539269643654,
+      "dense_score": 0.68983256816864,
+      "lexical_score": 0.42857142857142855,
+      "final_score": 0.6058410196470605,
+      "recall_5": true,
+      "recall_10": true,
+      "is_correct": true,
+      "answer": "Based on the provided transcript, Tom announced that he was **taking a break from social media** (specifically Instagram) to protect his mental health [01:54, 00:43, 05:22]. He explained that he felt his mental health would benefit from stepping away.",
+      "evidence_keywords": [
+        "announcement",
+        "taking a break",
+        "break from social media"
+      ]
+    },
+    {
+      "id": 5,
+      "category": "A. Direct factual",
+      "question": "What did the press claim was happening to Tom after he announced his break?",
+      "stage1_rank": 1,
+      "stage2_reranked_rank": 1,
+      "reranker_score": 0.5238640555793268,
+      "dense_score": 0.724685479756807,
+      "lexical_score": 0.3333333333333333,
+      "final_score": 0.5460043383833721,
+      "recall_5": true,
+      "recall_10": true,
+      "is_correct": true,
+      "answer": "The press claimed that Tom was **having a mental breakdown** after he announced his break from social media [06:36\u201106:48].",
+      "evidence_keywords": [
+        "mental breakdown",
+        "press ran with"
+      ]
+    },
+    {
+      "id": 6,
+      "category": "A. Direct factual",
+      "question": "According to the transcript, what does \"taxing\" mean in the context of Tom's job?",
+      "stage1_rank": 1,
+      "stage2_reranked_rank": 1,
+      "reranker_score": 0.5816716069335802,
+      "dense_score": 0.775362491607666,
+      "lexical_score": 0.25,
+      "final_score": 0.57344455094909,
+      "recall_5": true,
+      "recall_10": true,
+      "is_correct": true,
+      "answer": "According to the transcript, \"taxing\" describes something that is physically or mentally difficult and exhausting, which drains a person's energy [12:30, 03:14]. In the specific context of Tom's job, it refers to the emotional difficulty and exhaustion he experienced while playing an intense role in a series [03:14].",
+      "evidence_keywords": [
+        "taxing",
+        "difficult",
+        "exhausting",
+        "drained"
+      ]
+    },
+    {
+      "id": 7,
+      "category": "A. Direct factual",
+      "question": "What did Tom say the press did with the story about his social-media break?",
+      "stage1_rank": 1,
+      "stage2_reranked_rank": 2,
+      "reranker_score": 0.5128147471909494,
+      "dense_score": 0.73150897026062,
+      "lexical_score": 0.8,
+      "final_score": 0.6358600646736607,
+      "recall_5": true,
+      "recall_10": true,
+      "is_correct": true,
+      "answer": "Based on the transcript, Tom said that the press **\"ran with\"** his announcement about taking a break from social media, meaning they took his straightforward story and changed the narrative [06:10]. Instead of focusing on his positive reason for stepping away, they distorted it to make it sound like he was having a mental or nervous breakdown [00:17, 06:36]. As Tom put it, they **\"took the story in the wrong direction\"** [00:17].",
+      "evidence_keywords": [
+        "ran with",
+        "mental breakdown",
+        "wrong direction"
+      ]
+    },
+    {
+      "id": 8,
+      "category": "A. Direct factual",
+      "question": "What did Tom say he wanted to protect himself from?",
+      "stage1_rank": 1,
+      "stage2_reranked_rank": 1,
+      "reranker_score": 0.5003853274794217,
+      "dense_score": 0.636445424768603,
+      "lexical_score": 0.3333333333333333,
+      "final_score": 0.5077929578369584,
+      "recall_5": true,
+      "recall_10": true,
+      "is_correct": true,
+      "answer": "Based on the provided transcript, Tom Holland said he stepped away from Instagram **to protect his mental health** [00:43 - 01:01]. He explained that the platform was taking control of his life, thoughts, and actions, making it hard to focus [03:34 - 03:45]. He took this step preemptively to avoid reaching a point of mental or nervous breakdown [06:36 - 06:48, 07:40 - 08:08], specifically noting he did it \"in order to protect myself a hundred percent\" [08:21 - 08:31].",
+      "evidence_keywords": [
+        "mental breakdown",
+        "protect",
+        "myself"
+      ]
+    },
+    {
+      "id": 9,
+      "category": "B. Synonym / paraphrase",
+      "question": "What was Tom trying to prevent by stepping away from Instagram before things became worse?",
+      "stage1_rank": 9,
+      "stage2_reranked_rank": 10,
+      "reranker_score": 0.5000093216222001,
+      "dense_score": 0.649951538446455,
+      "lexical_score": 0.0,
+      "final_score": 0.44499012234503654,
+      "recall_5": false,
+      "recall_10": true,
+      "is_correct": true,
+      "answer": "Based on the provided transcript, Tom stepped away from Instagram to **protect his mental health and proactively avoid reaching a point of mental breakdown** [00:43-01:01, 06:53-07:07]. \n\nHe explained that he had become addicted to a \"false version of his life\" on the platform, which was taking over his thoughts and making it difficult to focus on his emotionally taxing acting job [01:27-01:49, 03:34-03:45]. Rather than being in crisis, he was taking preventative steps to safeguard his well-being before the situation worsened.",
+      "evidence_keywords": [
+        "mental breakdown",
+        "stop it before",
+        "proactively"
+      ]
+    },
+    {
+      "id": 10,
+      "category": "B. Synonym / paraphrase",
+      "question": "Why could Tom's decision to leave social media be described as taking precautions?",
+      "stage1_rank": 9,
+      "stage2_reranked_rank": 10,
+      "reranker_score": 0.500101864140061,
+      "dense_score": 0.664391835666191,
+      "lexical_score": 0.125,
+      "final_score": 0.4743684827698878,
+      "recall_5": false,
+      "recall_10": true,
+      "is_correct": true,
+      "answer": "Based on the provided transcript, Tom's decision to step away from social media can be described as taking precautions (or acting proactively) because he was taking early steps to protect his mental health and avoid reaching a point of mental breakdown [06:53]. Rather than waiting until the stress and obsession caused him to collapse, he decided to take a break before things got worse [06:36\u201306:48, 11:08\u201311:37]. The press misunderstood this preventative measure, framing it as if he was already having a breakdown, when he was actually trying to prevent one [02:04\u201302:21].",
+      "evidence_keywords": [
+        "advance",
+        "avoid problems",
+        "thinking ahead",
+        "proactive",
+        "preemptive"
+      ]
+    },
+    {
+      "id": 11,
+      "category": "B. Synonym / paraphrase",
+      "question": "What does the transcript suggest Tom was doing by recognizing a potential future problem and acting beforehand?",
+      "stage1_rank": 1,
+      "stage2_reranked_rank": 1,
+      "reranker_score": 0.5088356484442592,
+      "dense_score": 0.665935198553186,
+      "lexical_score": 0.3333333333333333,
+      "final_score": 0.5208650504547521,
+      "recall_5": true,
+      "recall_10": true,
+      "is_correct": true,
+      "answer": "Based on the transcript, Tom was acting **preemptively** (also referred to as **proactively**). The speakers define this as \"thinking ahead and doing something in advance to avoid problems\" [09:53-10:13]. Specifically, Tom was taking early steps to prevent himself from reaching a point of nervous breakdown [06:53-07:07].",
+      "evidence_keywords": [
+        "thinking ahead",
+        "in advance",
+        "proactive",
+        "preemptive"
+      ]
+    },
+    {
+      "id": 12,
+      "category": "B. Synonym / paraphrase",
+      "question": "In what way was Instagram negatively influencing Tom's behavior?",
+      "stage1_rank": 2,
+      "stage2_reranked_rank": 2,
+      "reranker_score": 0.5182258332566371,
+      "dense_score": 0.772871301941355,
+      "lexical_score": 0.25,
+      "final_score": 0.540974307210725,
+      "recall_5": true,
+      "recall_10": true,
+      "is_correct": true,
+      "answer": "Based on the provided transcript, Instagram negatively influenced Tom's behavior in the following ways:\n\n* **It took over his focus and daily actions:** Instagram was \"taking control of his life, of his thoughts and actions,\" which made it hard for him to concentrate on his job [03:34].\n* **Compulsive scrolling:** He found himself constantly scrolling during work, noting that he would sit in his chair on set and just \"scroll, scroll, scroll, scroll, scroll,\" which was becoming a serious problem [00:00, 12:48].\n* **Obsession with public perception:** He was \"obsessed with finding out what people were saying and what they thought about me,\" leading to unhealthy doom-scrolling habits [00:00, 04:09].\n* **Addiction to a false online persona:** He felt deeply addicted to a \"false version of my life\" on the platform, which contributed to his emotional exhaustion and ultimately prompted him to delete the app to protect his mental health [03:21, 12:48].",
+      "evidence_keywords": [
+        "scroll",
+        "obsessed",
+        "taking over",
+        "false version"
+      ]
+    },
+    {
+      "id": 13,
+      "category": "B. Synonym / paraphrase",
+      "question": "What does the discussion imply about Tom's decision to take a break before reaching a crisis point?",
+      "stage1_rank": 2,
+      "stage2_reranked_rank": 2,
+      "reranker_score": 0.500825169329165,
+      "dense_score": 0.752444758865551,
+      "lexical_score": 0.3333333333333333,
+      "final_score": 0.5428126789909145,
+      "recall_5": true,
+      "recall_10": true,
+      "is_correct": true,
+      "answer": "Based on the provided transcript, the discussion implies that Tom\u2019s decision to take a break was a **proactive and responsible measure to protect his mental health**, rather than a sign that he was already in crisis. \n\nKey evidence from the context includes:\n- Tom explicitly states he is taking a break `\"in order to protect myself\"` and avoid reaching a breakdown `[11:49]`.\n- The speakers highlight that the media unfairly mischaracterized this preventative step as a `\"mental breakdown\"` or `\"nervous breakdown\"` `[06:36, 07:40]`, which upset Tom because he was actually taking steps to avoid that exact point of collapse `[06:43]`.\n- One speaker summarizes the situation by noting it sounds like Tom was acting `\"preemptively\"` to stop himself from going in that direction `[07:40]`.\n\nIn short, the discussion frames his decision as responsible, preemptive self-care aimed at preventing a crisis, not a reaction to an existing one.",
+      "evidence_keywords": [
+        "proactively",
+        "advance",
+        "mental breakdown",
+        "responsible"
+      ]
+    },
+    {
+      "id": 14,
+      "category": "B. Synonym / paraphrase",
+      "question": "Why did Jay describe Tom's decision as responsible rather than simply reactive?",
+      "stage1_rank": 1,
+      "stage2_reranked_rank": 6,
+      "reranker_score": 0.5095579499938204,
+      "dense_score": 0.766010940074921,
+      "lexical_score": 0.0,
+      "final_score": 0.4845822570193865,
+      "recall_5": false,
+      "recall_10": true,
+      "is_correct": true,
+      "answer": "Based on the provided transcript, Jay Shetty interpreted Tom's decision as a **proactive and preemptive measure** rather than a reaction to a crisis. While the press framed Tom's step away from Instagram as a \"mental breakdown\" or negative event [06:36-06:48], Jay understood it as Tom taking early, intentional action to stop the platform from taking control of his life, thoughts, and ability to focus on his work [03:34-03:45]. \n\nAs the speakers explain, Jay recognized that Tom was acting \"preemptively\" to avoid going down a more destructive path, rather than waiting until he completely collapsed [07:40-08:08]. The transcript notes that \"taking action early is proactively\" [11:08-11:37], which aligns with viewing the decision as a responsible, forward-looking choice rather than a simple reaction to an emergency.",
+      "evidence_keywords": [
+        "proactively",
+        "before",
+        "thinking ahead",
+        "responsible"
+      ]
+    },
+    {
+      "id": 15,
+      "category": "B. Synonym / paraphrase",
+      "question": "What does \"thinking ahead\" have to do with Tom's decision to stop using Instagram?",
+      "stage1_rank": 9,
+      "stage2_reranked_rank": 4,
+      "reranker_score": 0.504434355218825,
+      "dense_score": 0.645798465859983,
+      "lexical_score": 0.3333333333333333,
+      "final_score": 0.512623384034074,
+      "recall_5": true,
+      "recall_10": true,
+      "is_correct": true,
+      "answer": "Based on the provided transcript, \"thinking ahead\" relates to Tom's decision because he acted **preemptively** to protect his mental health. \n\nAs explained at [09:53], acting preemptively means \"thinking ahead and doing something in advance to avoid problems.\" Rather than waiting until his Instagram addiction and obsession with public opinion caused his mental health to actually collapse, Tom proactively deleted the app to prevent reaching that point of breakdown [06:53-07:07]. In short, he thought ahead to stop a potential mental health crisis before it happened.",
+      "evidence_keywords": [
+        "thinking ahead",
+        "in advance",
+        "avoid problems",
+        "packing"
+      ]
+    },
+    {
+      "id": 16,
+      "category": "B. Synonym / paraphrase",
+      "question": "How did Tom attempt to avoid eventually finding himself in a worse mental state?",
+      "stage1_rank": 2,
+      "stage2_reranked_rank": 1,
+      "reranker_score": 0.5223626365474002,
+      "dense_score": 0.68734478580747,
+      "lexical_score": 0.125,
+      "final_score": 0.4923847540159412,
+      "recall_5": true,
+      "recall_10": true,
+      "is_correct": true,
+      "answer": "Tom said he was actively trying to stay out of a mental\u2011breakdown situation by **taking a break from social media** so that his mental health could benefit.  \n- He explained this at about **[05:22\u201105:43]** when he said, \u201cI\u2019m taking a break from social media because I feel like my mental health will benefit from it.\u201d  \n- He also noted that the press had mis\u2011characterised his actions, saying he was \u201cactually taking steps to avoid reaching that point of breakdown\u201d (see **[06:43\u201106:59]**).  \n\nThus, the concrete step he mentioned was stepping back from social media to protect his mental well\u2011being.",
+      "evidence_keywords": [
+        "delete",
+        "instagram",
+        "break",
+        "social media",
+        "myself"
+      ]
+    },
+    {
+      "id": 17,
+      "category": "C. Exact entity / lexical",
+      "question": "What was the name of the TV series Tom was filming?",
+      "stage1_rank": 2,
+      "stage2_reranked_rank": 2,
+      "reranker_score": 0.58251006878203,
+      "dense_score": 0.613930284976959,
+      "lexical_score": 0.6666666666666666,
+      "final_score": 0.6087674532174361,
+      "recall_5": true,
+      "recall_10": true,
+      "is_correct": true,
+      "answer": "Based on the provided transcript, the TV series Tom was filming is referred to as **\"The Crowded Room\"** (transcribed in the audio as \"the crowning crowded room\"). The speakers note that it is a psychological thriller TV series where Tom plays the protagonist [02:29 - 02:47].",
+      "evidence_keywords": [
+        "crowded room",
+        "psychological thriller",
+        "crowning"
+      ]
+    },
+    {
+      "id": 18,
+      "category": "C. Exact entity / lexical",
+      "question": "Which social-media platform did Tom delete?",
+      "stage1_rank": 1,
+      "stage2_reranked_rank": 6,
+      "reranker_score": 0.5329685576851221,
+      "dense_score": 0.686663091182714,
+      "lexical_score": 0.25,
+      "final_score": 0.5224832061973752,
+      "recall_5": false,
+      "recall_10": true,
+      "is_correct": true,
+      "answer": "Based on the provided transcript, Tom deleted **Instagram**. This is explicitly stated multiple times, such as at [03:21] and [12:48], where he says, \"I decided to delete my Instagram.\"",
+      "evidence_keywords": [
+        "instagram"
+      ]
+    },
+    {
+      "id": 19,
+      "category": "C. Exact entity / lexical",
+      "question": "What expression describes repeatedly scrolling through negative or distressing content?",
+      "stage1_rank": 1,
+      "stage2_reranked_rank": 1,
+      "reranker_score": 0.7123268766313761,
+      "dense_score": 0.736548812800787,
+      "lexical_score": 0.375,
+      "final_score": 0.6521280821559241,
+      "recall_5": true,
+      "recall_10": true,
+      "is_correct": true,
+      "answer": "Based on the provided transcript, the expression is **doom scrolling**. It refers to the specific negative experience of repeatedly scrolling through content on platforms like Instagram or TikTok [03:49 - 04:14].",
+      "evidence_keywords": [
+        "scroll",
+        "doom",
+        "scrolling"
+      ]
+    },
+    {
+      "id": 20,
+      "category": "C. Exact entity / lexical",
+      "question": "Which phrase did the transcript use to describe journalism that presented Tom negatively?",
+      "stage1_rank": 2,
+      "stage2_reranked_rank": 1,
+      "reranker_score": 0.5006654324970736,
+      "dense_score": 0.649184265684145,
+      "lexical_score": 0.3333333333333333,
+      "final_score": 0.511754662620447,
+      "recall_5": true,
+      "recall_10": true,
+      "is_correct": true,
+      "answer": "Based on the provided transcript, the phrase used to describe how the journalism presented Tom negatively is **\"paint in a negative light\"** (also referred to as **\"paint in a bad light\"**). \n\nSpeaker 2 explains this phrasing at [08:50\u201309:23] and [09:17\u201309:33], noting that the press \"painted [it] in a negative light\" to deliberately show Tom in a bad way, rather than portraying his experience positively or neutrally.",
+      "evidence_keywords": [
+        "wrong direction",
+        "negative light",
+        "mental breakdown",
+        "ran with"
+      ]
+    },
+    {
+      "id": 21,
+      "category": "C. Exact entity / lexical",
+      "question": "What expression means that someone is being portrayed as carefree and unconcerned about the future?",
+      "stage1_rank": 1,
+      "stage2_reranked_rank": 1,
+      "reranker_score": 0.5296838109302674,
+      "dense_score": 0.642885506153107,
+      "lexical_score": 0.25,
+      "final_score": 0.5077075573110659,
+      "recall_5": true,
+      "recall_10": true,
+      "is_correct": true,
+      "answer": "Based on the provided transcript, the expression is **\"happy-go-lucky.\"** \n\nAs Speaker 2 explains at [09:29 - 10:00], calling someone \"happy-go-lucky\" means portraying them as someone who is \"not concerned about the future and just enjoy[s] life without planning.\"",
+      "evidence_keywords": [
+        "happy-go-lucky",
+        "future"
+      ]
+    },
+    {
+      "id": 22,
+      "category": "C. Exact entity / lexical",
+      "question": "What phrase means that someone is attributing words or intentions to another person that they did not actually express?",
+      "stage1_rank": 1,
+      "stage2_reranked_rank": 1,
+      "reranker_score": 0.5060460065178909,
+      "dense_score": 0.701990127563477,
+      "lexical_score": 0.45454545454545453,
+      "final_score": 0.5545291324370795,
+      "recall_5": true,
+      "recall_10": true,
+      "is_correct": true,
+      "answer": "Based on the provided transcript, the phrase is **\"putting words in one's mouth\"** (or \"put words in my mouth\"). As Speaker 1 explains at [10:56], this phrase \"refers to saying that someone means one thing when a person really meant something else.\" It is commonly used to object to someone misrepresenting or attributing specific words or intentions that weren't actually expressed.",
+      "evidence_keywords": [
+        "putting words in",
+        "mouth"
+      ]
+    },
+    {
+      "id": 23,
+      "category": "D. Multi-chunk synthesis",
+      "question": "How did Tom's workload, Instagram usage, and concern about public opinion combine to influence his decision to take a social-media break?",
+      "stage1_rank": 2,
+      "stage2_reranked_rank": 2,
+      "reranker_score": 0.5152333195727132,
+      "dense_score": 0.726254539116948,
+      "lexical_score": 0.23076923076923078,
+      "final_score": 0.5216468676752872,
+      "recall_5": true,
+      "recall_10": true,
+      "is_correct": true,
+      "answer": "Based on the provided transcript, Tom's decision to take a break from social media was driven by the negative intersection of these three factors:\n\n* **Instagram Usage & Workload:** Instagram had become so consuming that it was \"taking control\" of his life, thoughts, and actions, which made it difficult for him to focus on his job [03:34-03:45]. He described himself as \"obsessed\" and \"addicted\" to scrolling and maintaining a \"false version\" of his life online [01:54-02:09, 03:21-03:33].\n* **Concern About Public Opinion:** He was heavily preoccupied with constantly checking what people were saying and what they thought of him [00:09-00:23, 01:54-02:09].\n* **The Combined Impact & Decision:** The combination of losing professional focus, becoming addicted to the platform, and obsessing over public perception created a mentally taxing",
+      "evidence_keywords": [
+        "taxing",
+        "scroll",
+        "what they thought",
+        "obsessed",
+        "break"
+      ]
+    },
+    {
+      "id": 24,
+      "category": "D. Multi-chunk synthesis",
+      "question": "Explain the chain of events from Tom's difficult experience filming in New York to the press portraying his decision negatively.",
+      "stage1_rank": 2,
+      "stage2_reranked_rank": 1,
+      "reranker_score": 0.6725996993811333,
+      "dense_score": 0.684783417893446,
+      "lexical_score": 0.18181818181818182,
+      "final_score": 0.5780985114222368,
+      "recall_5": true,
+      "recall_10": true,
+      "is_correct": true,
+      "answer": "<think>\nHere's a thinking process:\n\n1.  **Analyze User Prompt:**\n   - **Question:** Explain the chain of events from Tom's difficult experience filming in New York to the press portraying his decision negatively.\n   - **Key Elements to Address:**\n     - Tom's difficult experience filming in New York\n     - The press's reaction/portrayal\n     - The chain of events connecting them\n   - **Constraint:** Must be grounded in the provided transcript context. Use timestamps/speakers if helpful. Do not invent facts.\n\n2.  **Scan Context for Relevant Information:**\n   - `[00:17 - 00:33] (Speaker 1)`: \"is the press ran with that. And they tried to make out that I was having this mental breakdown. They took the story in the wrong direction. Oh, look, he's not the perfect happy go lucky kid you think he is. He's having a nervous breakdown in New York, kind of painted people looking for help\"\n   - `[02:41 - 02:59] (Speaker 1)`: \"thriller tv series where Tom is the protagonist. So he says he was having a hard time filming it meaning he was struggling. It was a difficult moment for him.\"\n   - `[06:10 - 06:22] (Speaker 2)`: \"In this case, Tom is saying that the press, that is magazines, newspapers, TV news, etc., they took this story, which was pretty straightforward, and they changed the narrative. And that's what he means by this line.\"\n   - `[02:29 - 02:47] (Speaker 1)`: \"pronunciation with tom holland i was in new york i was shooting the crowning crowded room in this context shooting means filming the crowded room we should mention here is a psychological thriller tv series where Tom is the protagonist. So he says he was having a hard time filming it\"\n   - `[07:51 - 08:17] (Speaker 2)`: \"He having a nervous breakdown in New York And I think that that was a really unfair line of journalism let say Yeah yeah absolutely Absolutely It almost sounds like you were actually preemptively going I doing this so that I don right go in that direction totally at least I'm not trying to put words in your mouth but absolutely it's almost like I'm proactively seeing that I could end up in a position where sure I might have a breakdown I\"\n   - `[02:15 - 02:34] (Speaker 1)`: \"mental breakdown and what upset me was if i was having a mental breakdown that's not for you to report on all right now let's break down the clip and learn all the advanced vocabulary and pronunciation with tom holland i was in new york i was shooting the crowning crowded room\"\n   - `[07:40 - 08:08] (Speaker 2)`: \"rather than saying, oh, he's doing it. It's okay that he's doing it. So we should all feel okay to do it too. They were saying, oh, look, he's not the perfect happy go lucky kid you think he is. He having a nervous breakdown in New York And I think that that was a really unfair line of journalism let say Yeah yeah absolutely Absolutely It almost sounds like you were actually preemptively going I doing this so that I don right go in that direction\"\n   - `[06:00 - 06:16] (Speaker 2)`: \"For example, a more positive situation could be, she had a great idea for the project and the team ran with it, meaning they developed and expanded on the idea. In this case, Tom is saying that the press, that is magazines, newspapers, TV news, etc.,\"\n   - `[01:16 - 01:38] (Speaker 1)`: \"started with the lesson. First, you'll watch the clip, then you'll learn with it, and at the end, I'm going to let you test your comprehension by watching the entire clip a final time without any subtitles. I was in New York, I was shooting the crowded room and I was having a really hard time\"\n\n3.  **Synthesize the Chain of Events:**\n   - **Event 1:** Tom was in New York filming a psychological thriller TV series called *The Crowded Room* (`[02:29-02:47]`, `[02:41-02:59]`, `[01:16-01:38]`).\n   - **Event 2:** During filming, he was having a really hard time/struggling, which was a difficult moment for him (`[02:41-02:59]`, `[01:16-01:38]`).\n   - **Event 3:** He made a decision (implied to be seeking help or taking a step for his well-being, though the exact decision isn't fully detailed, the context mentions \"painted people looking for help\" and \"proactively seeing that I could end up in a position where sure I might have a breakdown\").\n   - **Event 4:** Instead of focusing on the positive reason behind his decision (e.g., normalizing seeking help), the press \"ran with it\" and changed the narrative (`[06:00-06:16]`, `[06:10-06:22]`).\n   - **Event 5:** The media portrayed him negatively, framing it as a \"mental breakdown\" or \"nervous breakdown in New York,\" and used it to paint him as not being the \"perfect happy go lucky kid\" people thought he was (`[00:17-00:33]`, `[07:40-08:08]`).\n   - **Event 6:** Tom found this line of journalism unfair and upsetting, especially since personal struggles/breakdowns aren't something he felt the press should report on (`[02:15-02:34]`, `[07:51-08:17]`).\n\n4.  **Draft Response (Mental Refinement):**\n   Based on the transcript, the chain of events unfolds as follows:\n   - Tom was in New York filming a psychological thriller TV series called *The Crowded Room* (`[02:29-02:47]`, `[01:16-01:38]`).\n   - During production, he was going through a difficult time and struggling with the process (`[02:41-02:59]`).\n   - He made a decision (implied to be related to seeking help or addressing his well-being proactively) (`[07:51-08:17]`).\n   - Rather than framing this decision positively or normalizing the act of seeking help, the press \"ran with it\" and altered the straightforward narrative (`[06:00-06:22]`).\n   - The media negatively portrayed the situation by claiming he was having a \"mental\" or \"nervous breakdown in New York,\" using it to paint him as flawed rather than the \"perfect happy go lucky kid\" the public perceived him to be (`[00:17-00:33]`, `[07:40-08:08]`).\n   - Tom found this media coverage deeply upsetting and unfair, emphasizing that personal struggles and mental health are not appropriate topics for public reporting (`[02:15-02:34]`, `[07:51-08:17]`).\n\n   Check against constraints: All points are directly supported by timestamps. No invented facts. Clear and direct. Matches the prompt's request for the chain of events.\n\n5.  **Final Output Generation:** (Structure clearly, cite timestamps, maintain objective tone based strictly on context)\n   - Start with the filming context\n   - Mention the struggle\n   - Explain the press's reaction (\"ran with it\", changed narrative)\n   - Detail the negative portrayal (\"mental breakdown\", not the \"happy go lucky kid\")\n   - Note Tom's reaction (unfair journalism, privacy concern)\n   - Ensure all claims map to provided text. All good.\u2705\n   - Output matches the refined draft.\u2705\n   - Proceed. \n   - Self-Correction/Verification during thought: \n     - Does the transcript explicitly say what the \"decision\" was? It says \"instead of focusing on the positive reason behind his decision\" (`[06:36-06:48]`) and mentions \"painted people looking for help\" (`[00:17-00:33]`) and \"proactively seeing that I could end up in a position where sure I might have a breakdown\" (`[07:51-08:17]`). I should phrase it carefully to reflect that the exact decision isn't fully detailed, but it relates to seeking help/addressing his well-being.\n     - The chain is clear: Filming -> Struggling -> Making a decision (likely seeking help) -> Press takes it -> Changes narrative to \"mental breakdown\" -> Frames him negatively -> Tom calls it unfair journalism.\n     - All aligns perfectly. I will generate the response now. \n     - Structure: Bullet points or paragraph with clear chronological flow, citing timestamps. Keep it concise.\u2705\n   - Output Generation",
+      "evidence_keywords": [
+        "shooting",
+        "taxing",
+        "instagram",
+        "announcement",
+        "press ran with",
+        "mental breakdown"
+      ]
+    },
+    {
+      "id": 25,
+      "category": "D. Multi-chunk synthesis",
+      "question": "How does the transcript connect Tom's Instagram addiction with his concern about what other people thought of him?",
+      "stage1_rank": 3,
+      "stage2_reranked_rank": 2,
+      "reranker_score": 0.5219098933988765,
+      "dense_score": 0.729054971280992,
+      "lexical_score": 0.125,
+      "final_score": 0.5046714380837358,
+      "recall_5": true,
+      "recall_10": true,
+      "is_correct": true,
+      "answer": "Based on the provided transcript, Tom connects his Instagram addiction to his concern about others' opinions by explaining that his attachment to the platform fueled a compulsive need to monitor public perception. He explicitly states that he was `\"obsessed to find out what people were saying\"` and `\"what they thought about me\"` [00:09-00:23, 05:22-05:43]. \n\nThis obsession was rooted in his feeling of being `\"so addicted to this kind of false version of my life\"` on Instagram [03:21-03:33]. The transcript explains that this cycle eventually `\"took control\"` of his thoughts and actions, making it difficult to focus on his job and daily life [03:34-03:45]. Because constantly seeking validation and worrying about how others viewed him was becoming emotionally taxing and harmful to his mental health, he decided to delete the app and take a break from social media [00:43-01:01, 13:11-13:28].",
+      "evidence_keywords": [
+        "obsessed",
+        "what they thought",
+        "false version"
+      ]
+    },
+    {
+      "id": 26,
+      "category": "D. Multi-chunk synthesis",
+      "question": "Why did Jay consider Tom's decision to leave Instagram both proactive and admirable?",
+      "stage1_rank": 2,
+      "stage2_reranked_rank": 4,
+      "reranker_score": 0.5011449772641332,
+      "dense_score": 0.709534185556521,
+      "lexical_score": 0.14285714285714285,
+      "final_score": 0.4920041728704515,
+      "recall_5": true,
+      "recall_10": true,
+      "is_correct": false,
+      "answer": "Based on the provided transcript, here is a breakdown of why Jay Sh",
+      "evidence_keywords": [
+        "proactively",
+        "thinking ahead",
+        "avoid problems",
+        "admirable",
+        "responsible"
+      ]
+    },
+    {
+      "id": 27,
+      "category": "D. Multi-chunk synthesis",
+      "question": "How does the explanation of \"preemptively\" relate to the later explanation of \"proactively\"?",
+      "stage1_rank": 1,
+      "stage2_reranked_rank": 1,
+      "reranker_score": 0.5170211690044493,
+      "dense_score": 0.747182876207491,
+      "lexical_score": 0.16666666666666666,
+      "final_score": 0.5159987806978052,
+      "recall_5": true,
+      "recall_10": true,
+      "is_correct": true,
+      "answer": "The transcript first explains **preemptively** as \u201cthinking ahead and doing something in advance to avoid problems\u201d (Speaker\u202f2, 10:06\u201110:24).  \nLater, Speaker\u202f1 adds that **proactively** is \u201canother word we use to talk about taking action early\u201d (Speaker\u202f1, 11:18\u201111:44).  \n\nSo, the two terms are related in that both describe actions taken before a problem occurs.  \n* **Preemptively** is specifically about acting to stop a particular anticipated issue (e.g., packing the night before a trip or a pre\u2011emptive military strike).  \n* **Proactively** is a broader, more general way of describing early action\u2014such as exercising regularly to stay healthy\u2014aimed at improving or maintaining a situation rather than just preventing a specific threat.  \n\nIn short, the explanation of \u201cpreemptively\u201d sets up the idea of early action, and the later explanation of \u201cproactively\u201d expands that idea to a wider range of preventive or improvement\u2011oriented behaviors.",
+      "evidence_keywords": [
+        "preemptively",
+        "proactively",
+        "advance",
+        "thinking ahead"
+      ]
+    },
+    {
+      "id": 28,
+      "category": "D. Multi-chunk synthesis",
+      "question": "Compare Tom's actual reason for leaving Instagram with the way the press presented his decision.",
+      "stage1_rank": 3,
+      "stage2_reranked_rank": 1,
+      "reranker_score": 0.6115554684368837,
+      "dense_score": 0.71773264196722,
+      "lexical_score": 0.375,
+      "final_score": 0.5960975268086077,
+      "recall_5": true,
+      "recall_10": true,
+      "is_correct": true,
+      "answer": "Based on the provided transcript, here is a structured comparison of Tom Holland's actual motivation for leaving Instagram versus how the media framed his decision:\n\n### \ud83d\udd39 Tom's Actual Reason for Leaving Instagram\n- **Addiction & Distraction:** Tom felt increasingly addicted to scrolling on Instagram, even during breaks on set. He described it as \"taking over\" his attention and becoming a problem.\n- **Obsession with Public Perception:** He was overly focused on checking what people were saying and thinking about him, which created unnecessary mental strain.\n- **Proactive Self-Care:** Tom framed the decision as a responsible, preemptive step to protect his mental well-being while filming a highly taxing role. He explicitly stated he was \"proactively seeing that I could end up in a position where I might have a breakdown\" and wanted to avoid that by setting a healthy boundary.\n\n### \ud83d\udd39 How the Press Presented His Decision\n- **Sensationalized as a Crisis:** Instead of acknowledging it as a wellness boundary, the press \"ran with\" the story and portrayed it as evidence that Tom was experiencing a \"mental breakdown\" or \"nervous breakdown.\"\n- **Negative Character Framing:** The media used the announcement to challenge his public image, suggesting he wasn't the \"perfect, happy-go-lucky kid\" fans believed him to be.\n- **Stigmatizing Mental Health Advocacy:** Tom noted that the coverage \"painted people looking for help in the wrong light,\" turning a proactive self-care choice into a scandal or sign of instability rather than normalizing healthy boundaries.\n\n### \ud83d\udd0d Key Differences & Comparison\n| Aspect | Tom's Perspective | Press's",
+      "evidence_keywords": [
+        "protect",
+        "addicted",
+        "mental breakdown",
+        "wrong direction"
+      ]
+    },
+    {
+      "id": 29,
+      "category": "D. Multi-chunk synthesis",
+      "question": "How do the concepts of \"mental breakdown,\" \"preemptively,\" and \"protect myself\" fit together in the discussion?",
+      "stage1_rank": 1,
+      "stage2_reranked_rank": 1,
+      "reranker_score": 0.5313479016620463,
+      "dense_score": 0.676417627761647,
+      "lexical_score": 0.375,
+      "final_score": 0.5435992391595172,
+      "recall_5": true,
+      "recall_10": true,
+      "is_correct": true,
+      "answer": "Based on the provided transcript, these three concepts are directly linked to explain the speaker's decision to step away from social media as a responsible act of self-care:\n\n* **Mental breakdown:** The speaker acknowledges the realistic risk that ongoing pressure could eventually push him to a point of severe stress or collapse [06:36, 14:48].\n* **Preemptively (noted as \"proactively\" in the transcript):** Rather than waiting until he actually reached that crisis point, he acted ahead of time. The transcript explicitly uses the word \"proactively\" [08:12] and \"responsibly\" [11:49, 14:48] to describe this forward-looking approach.\n* **Protect myself:** This was the explicit motivation for his early action. By stepping back before things escalated, his goal was to safeguard his well-being and avoid the breakdown altogether [08:12, 11:49, 14:48].\n\n**How they fit together:**\nThe concepts form a clear cause-and-effect chain of preventative self-care: recognizing a potential future crisis (`mental breakdown`), acting ahead of time (`proactively`/preemptively), with the direct goal of self-preservation (`protect myself`). \n\nThe speaker also emphasizes that the press unfortunately twisted this responsible, preventative decision into a negative narrative, claiming he was *already* having a mental breakdown rather than acknowledging it as a healthy, self-protective step [05:39, 13:34, 13:57].",
+      "evidence_keywords": [
+        "mental breakdown",
+        "preemptively",
+        "protect",
+        "myself"
+      ]
+    },
+    {
+      "id": 30,
+      "category": "D. Multi-chunk synthesis",
+      "question": "What sequence of reasoning does the transcript give for why taking a break from social media could be considered a responsible decision?",
+      "stage1_rank": 8,
+      "stage2_reranked_rank": 8,
+      "reranker_score": 0.5007856500970503,
+      "dense_score": 0.63362320461135,
+      "lexical_score": 0.25,
+      "final_score": 0.4904797864319302,
+      "recall_5": false,
+      "recall_10": true,
+      "is_correct": true,
+      "answer": "Based on the provided transcript, the reasoning follows this clear sequence:\n\n1. **Recognizing a harmful pattern:** The speaker realized he was constantly scrolling and had become obsessed with checking what people were saying and thinking about him, which was becoming a problem [01:54].\n2. **Identifying the potential consequence:** He acknowledged that this behavior risked leading to a mental breakdown, which the transcript defines as a state where overwhelming stress from thoughts and emotions causes a person to collapse [06:36, 14:48].\n3. **Establishing a personal boundary:** He explicitly stated that he did not want to end up in that position [14:48].\n4. **Taking preventative action:** To avoid that outcome and protect his well-being, he decided to step away from social media [14:48].\n5. **Why it\u2019s considered responsible:** Because the decision was a deliberate, proactive step taken to safeguard himself before reaching a crisis point\u2014rather than a reaction to an existing breakdown\u2014it is framed as a responsible choice [06:53, 14:48\u20131",
+      "evidence_keywords": [
+        "thinking ahead",
+        "advance",
+        "avoid problems",
+        "protect"
+      ]
+    },
+    {
+      "id": 31,
+      "category": "E. Distractor-heavy",
+      "question": "When discussing Tom's social-media decision, was the main issue that he disliked the press, that he was bored with Instagram, or that his use of Instagram had become problematic?",
+      "stage1_rank": 2,
+      "stage2_reranked_rank": 2,
+      "reranker_score": 0.5297045006055661,
+      "dense_score": 0.67382888041907,
+      "lexical_score": 0.15384615384615385,
+      "final_score": 0.49777014519773477,
+      "recall_5": true,
+      "recall_10": true,
+      "is_correct": true,
+      "answer": "Based on the provided transcript, the main issue was that **his use of Instagram had become problematic**. \n\nTom explicitly states that he deleted Instagram because he felt \"addicted to this kind of false version of my life that it was just taking over\" [03:21, 12:48]. He explains that the app was controlling his thoughts and actions, making it hard to focus on his job [03:34], and he directly notes that \"it was becoming a problem\" [13:06]. His primary motivation for stepping away was to protect his mental health [00:43].\n\nWhile the press did upset him by mischaracterizing his break as a \"mental breakdown\" [00:09, 05:39], that was a reaction to his decision, not the reason he made it. There is no mention in the context of him being bored with the platform.",
+      "evidence_keywords": [
+        "becoming a problem",
+        "obsessed",
+        "addicted"
+      ]
+    },
+    {
+      "id": 32,
+      "category": "E. Distractor-heavy",
+      "question": "What was Tom primarily concerned about: losing his acting job, what people thought about him, or being unable to use social media?",
+      "stage1_rank": 4,
+      "stage2_reranked_rank": 2,
+      "reranker_score": 0.5003731332143064,
+      "dense_score": 0.623846650123596,
+      "lexical_score": 0.3,
+      "final_score": 0.49734056164423196,
+      "recall_5": true,
+      "recall_10": true,
+      "is_correct": true,
+      "answer": "Based on the provided transcript, Tom was primarily concerned about **what people thought about him**. He explicitly states, \"I was obsessed to find out what they thought about me\" [00:09, 05:22, 13:11], which directly led to his decision to step away from social media. The context does not indicate that losing his acting job or being unable to use social media were his primary concerns.",
+      "evidence_keywords": [
+        "what they thought about me",
+        "what people thought"
+      ]
+    },
+    {
+      "id": 33,
+      "category": "E. Distractor-heavy",
+      "question": "When the press \"ran with\" Tom's announcement, were they simply reporting his statement, ignoring it, or developing a different interpretation of the story?",
+      "stage1_rank": 2,
+      "stage2_reranked_rank": 2,
+      "reranker_score": 0.5800957700178033,
+      "dense_score": 0.674644430002903,
+      "lexical_score": 0.16666666666666666,
+      "final_score": 0.5257745473431059,
+      "recall_5": true,
+      "recall_10": true,
+      "is_correct": true,
+      "answer": "Based on the provided transcript, the press **developed a different interpretation of the story**. \n\nRather than simply reporting Tom's straightforward announcement about taking a break from social media, they \"changed the narrative\" [06:10-06:22] and \"took the story in the wrong direction\" [00:17-00:33]. Instead of focusing on the positive reasons behind his decision, they spun it negatively by claiming he was having a \"mental breakdown\" [06:36-06:48]. Tom and the speaker note that this approach painted his actions in an unfair, negative light rather than normalizing his choice to step away from social media [13:57-14:13].",
+      "evidence_keywords": [
+        "ran with",
+        "mental breakdown",
+        "wrong direction"
+      ]
+    },
+    {
+      "id": 34,
+      "category": "E. Distractor-heavy",
+      "question": "Which situation best represents the meaning of \"preemptively\" according to the transcript: apologizing after hurting someone, preventing a problem before it occurs, or dealing with a problem after it becomes serious?",
+      "stage1_rank": 1,
+      "stage2_reranked_rank": 1,
+      "reranker_score": 0.619848517617917,
+      "dense_score": 0.748822569847107,
+      "lexical_score": 0.25,
+      "final_score": 0.5845710297630906,
+      "recall_5": true,
+      "recall_10": true,
+      "is_correct": true,
+      "answer": "According to the transcript, the situation that best represents the meaning of \"preemptively\" is **preventing a problem before it occurs**. \n\nSpeaker 2 explicitly defines acting preemptively as \"thinking ahead and doing something in advance to avoid problems\" [09:53-10:13]. The speaker supports this with examples like packing the night before a trip to avoid morning rushing [10:06-10:24] and a military strike launched to stop an expected enemy attack [10:18-10:39].",
+      "evidence_keywords": [
+        "avoid problems",
+        "thinking ahead",
+        "in advance"
+      ]
+    },
+    {
+      "id": 35,
+      "category": "E. Distractor-heavy",
+      "question": "When the transcript says the press \"painted\" Tom in a negative light, does this mean they literally described his appearance, presented him unfavorably, or ignored his story completely?",
+      "stage1_rank": 1,
+      "stage2_reranked_rank": 1,
+      "reranker_score": 0.7208972721587911,
+      "dense_score": 0.708281278610229,
+      "lexical_score": 0.3333333333333333,
+      "final_score": 0.6395996863291309,
+      "recall_5": true,
+      "recall_10": true,
+      "is_correct": true,
+      "answer": "Based on the transcript, it means they **presented him unfavorably**. \n\nThe speakers explicitly clarify that the phrase is metaphorical, not about physical appearance. As Speaker 2 explains, \"to paint something negatively means to describe or show something in a bad way\" [08:54-09:11] and \"to show someone in a bad light or negative light, as he says, is exactly what he's talking about\" [09:05-09:23]. \n\nAdditionally, the transcript notes that the press did not ignore the story; rather, they actively covered it but \"changed the narrative\" [06:10-06:22]. Instead of focusing on the positive reasons behind Tom's decision, they \"made it sound like he was having a mental breakdown\" [06:36-06:48], which is how they presented him in a negative light.",
+      "evidence_keywords": [
+        "negative light",
+        "press",
+        "painted"
+      ]
+    },
+    {
+      "id": 36,
+      "category": "E. Distractor-heavy",
+      "question": "What was described as \"taxing\": Tom's social-media activity, the filming job, or the press coverage?",
+      "stage1_rank": 1,
+      "stage2_reranked_rank": 1,
+      "reranker_score": 0.5793705952561724,
+      "dense_score": 0.694935936037545,
+      "lexical_score": 0.125,
+      "final_score": 0.5231660784393497,
+      "recall_5": true,
+      "recall_10": true,
+      "is_correct": true,
+      "answer": "Based on the transcript, the **filming job** was described as \"taxing.\" Speaker 2 clarifies at [03:14] and [03:21] that \"playing this intense role in this series was emotionally taxing,\" and Speaker 1 quotes Tom at [12:12] stating he was \"having a really hard time with the job just because of how taxing it was.\" The transcript discusses social media and press coverage separately, without applying the term \"taxing\" to them.",
+      "evidence_keywords": [
+        "shooting",
+        "job",
+        "taxing"
+      ]
+    },
+    {
+      "id": 37,
+      "category": "F. Negative / no-answer",
+      "question": "What was Tom's exact Instagram follower count when he deleted the app?",
+      "stage1_rank": null,
+      "stage2_reranked_rank": null,
+      "reranker_score": null,
+      "dense_score": null,
+      "lexical_score": null,
+      "final_score": null,
+      "recall_5": true,
+      "recall_10": true,
+      "is_correct": true,
+      "answer": "Based on the provided transcript context, there is no mention of Tom's exact Instagram follower count when he deleted the app. The available transcript context does not provide sufficient information to answer this question.",
+      "evidence_keywords": []
+    },
+    {
+      "id": 38,
+      "category": "F. Negative / no-answer",
+      "question": "What date did Tom permanently delete his Instagram account?",
+      "stage1_rank": null,
+      "stage2_reranked_rank": null,
+      "reranker_score": null,
+      "dense_score": null,
+      "lexical_score": null,
+      "final_score": null,
+      "recall_5": true,
+      "recall_10": true,
+      "is_correct": true,
+      "answer": "Based on the provided transcript context, there is no mention of the specific date when Tom deleted his Instagram account. The speakers only discuss his decision to delete it or step away from it to protect his mental health and break his addiction to scrolling (e.g., [00:00-00:13], [03:21-03:33], [12:48-13:06]), but no exact date is provided. Therefore, the available transcript context does not provide sufficient information to answer your question.",
+      "evidence_keywords": []
+    },
+    {
+      "id": 39,
+      "category": "F. Negative / no-answer",
+      "question": "How many hours per day did Tom spend scrolling Instagram?",
+      "stage1_rank": null,
+      "stage2_reranked_rank": null,
+      "reranker_score": null,
+      "dense_score": null,
+      "lexical_score": null,
+      "final_score": null,
+      "recall_5": true,
+      "recall_10": true,
+      "is_correct": true,
+      "answer": "The provided transcript does not include any information about how many hours per day Tom Holland spent scrolling on Instagram.",
+      "evidence_keywords": []
+    },
+    {
+      "id": 40,
+      "category": "F. Negative / no-answer",
+      "question": "What specific medication did Tom take to deal with the stress of filming?",
+      "stage1_rank": null,
+      "stage2_reranked_rank": null,
+      "reranker_score": null,
+      "dense_score": null,
+      "lexical_score": null,
+      "final_score": null,
+      "recall_5": true,
+      "recall_10": true,
+      "is_correct": true,
+      "answer": "Based on the provided transcript context, there is no mention of any specific medication Tom took to deal with the stress of filming. The available transcript context does not provide sufficient information to answer this question.",
+      "evidence_keywords": []
+    },
+    {
+      "id": 41,
+      "category": "G. Speaker attribution",
+      "question": "Who explains that \"taking over\" means something is gaining control?",
+      "stage1_rank": 1,
+      "stage2_reranked_rank": 1,
+      "reranker_score": 0.5983064146996223,
+      "dense_score": 0.755055695169485,
+      "lexical_score": 0.7142857142857143,
+      "final_score": 0.6685270587577995,
+      "recall_5": true,
+      "recall_10": true,
+      "is_correct": true,
+      "answer": "Based on the provided transcript, **Speaker 1 and Speaker 2** explain this concept. At timestamp **[03:34]**, they explicitly state, *\"When something takes over, it takes control,\"* clarifying that it refers to something gaining control over a person's life, thoughts, and actions.",
+      "evidence_keywords": [
+        "takes over",
+        "control",
+        "Speaker 1"
+      ]
+    },
+    {
+      "id": 42,
+      "category": "G. Speaker attribution",
+      "question": "Who explains the meaning of \"run with something\"?",
+      "stage1_rank": 1,
+      "stage2_reranked_rank": 1,
+      "reranker_score": 0.7300278445990646,
+      "dense_score": 0.869809218060422,
+      "lexical_score": 0.3333333333333333,
+      "final_score": 0.6926233543843255,
+      "recall_5": true,
+      "recall_10": true,
+      "is_correct": true,
+      "answer": "Based on the provided transcript, **Speaker 2** explains the meaning of the phrase. They state that \"to run with something is a collocation that means to take an idea and develop it further without hesitation\" [05:39-05:56, 05:50-06:03].",
+      "evidence_keywords": [
+        "run with",
+        "Speaker 1",
+        "Speaker 2"
+      ]
+    },
+    {
+      "id": 43,
+      "category": "G. Speaker attribution",
+      "question": "Who introduces the concept of a \"preemptive\" action?",
+      "stage1_rank": 1,
+      "stage2_reranked_rank": 1,
+      "reranker_score": 0.5005155738245644,
+      "dense_score": 0.645047149357371,
+      "lexical_score": 0.5,
+      "final_score": 0.5437719317194935,
+      "recall_5": true,
+      "recall_10": true,
+      "is_correct": true,
+      "answer": "Based on the provided transcript, **Speaker 2** introduces the concept. At [09:53 - 10:13] and [10:06 - 10:24], Speaker 2 explains that acting preemptively means \"thinking ahead and doing something in advance to avoid problems,\" illustrating it with examples like packing the night before a trip or a military preemptive strike.",
+      "evidence_keywords": [
+        "preemptive",
+        "Speaker 1",
+        "Speaker 2"
+      ]
+    },
+    {
+      "id": 44,
+      "category": "G. Speaker attribution",
+      "question": "Who explains what \"putting words in one's mouth\" means?",
+      "stage1_rank": 1,
+      "stage2_reranked_rank": 1,
+      "reranker_score": 0.7308569878057379,
+      "dense_score": 0.882184877135172,
+      "lexical_score": 0.8,
+      "final_score": 0.7900839570434206,
+      "recall_5": true,
+      "recall_10": true,
+      "is_correct": true,
+      "answer": "Based on the provided transcript, **Speaker 1** explains the phrase. They define \"putting words in one's mouth\" as \"saying that someone means one thing when a person really meant something else\" [10:56 - 11:13].",
+      "evidence_keywords": [
+        "putting words in",
+        "Speaker 1"
+      ]
+    },
+    {
+      "id": 45,
+      "category": "G. Speaker attribution",
+      "question": "Who describes Tom's decision as potentially proactive?",
+      "stage1_rank": 1,
+      "stage2_reranked_rank": 1,
+      "reranker_score": 0.5296666959795764,
+      "dense_score": 0.719787240028381,
+      "lexical_score": 0.25,
+      "final_score": 0.5307695199983026,
+      "recall_5": true,
+      "recall_10": true,
+      "is_correct": true,
+      "answer": "Based on the provided transcript, **Speaker 1** describes Tom's decision as proactive. \n\nAt [11:18], Speaker 1 introduces the term \"proactively\" to mean taking action early and directly applies it to Tom's story. Later, at [14:43], Speaker 1 reinforces this connection by stating that Tom was \"proactively seeing that I could end up in a position where I might have a breakdown,\" indicating he took early steps to avoid a mental collapse. \n\n*(Note:",
+      "evidence_keywords": [
+        "proactively",
+        "Speaker 2",
+        "Jay Shetty"
+      ]
+    },
+    {
+      "id": 46,
+      "category": "G. Speaker attribution",
+      "question": "Who explains the meaning of \"happy-go-lucky\"?",
+      "stage1_rank": 1,
+      "stage2_reranked_rank": 1,
+      "reranker_score": 0.7076882024699063,
+      "dense_score": 0.649173519064575,
+      "lexical_score": 0.5,
+      "final_score": 0.6485961569543256,
+      "recall_5": true,
+      "recall_10": true,
+      "is_correct": true,
+      "answer": "Based on the provided transcript, **Speaker 2** explains the meaning of \"happy-go-lucky.\" At timestamps [09:29-10:00], Speaker 2 clarifies that calling someone \"happy-go-lucky\" means they \"are not concerned about the future and just enjoy life without planning.\"",
+      "evidence_keywords": [
+        "happy-go-lucky",
+        "Speaker 2"
+      ]
+    }
+  ]
+}

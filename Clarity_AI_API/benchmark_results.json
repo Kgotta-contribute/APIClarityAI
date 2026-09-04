@@ -1,0 +1,557 @@
+{
+  "overall_accuracy": 94.0,
+  "total_passed": 47,
+  "total_questions": 50,
+  "category_stats": {
+    "Semantic Retrieval": {
+      "total": 8,
+      "passed": 8,
+      "scores": [
+        0.75,
+        0.6666666666666666,
+        1.0,
+        1.0,
+        0.75,
+        0.5,
+        0.6666666666666666,
+        1.0
+      ]
+    },
+    "Multi-Hop Reasoning": {
+      "total": 8,
+      "passed": 8,
+      "scores": [
+        1.0,
+        0.75,
+        1.0,
+        1.0,
+        0.6666666666666666,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "Numerical / Temporal": {
+      "total": 6,
+      "passed": 6,
+      "scores": [
+        1.0,
+        0.75,
+        1.0,
+        1.0,
+        0.8333333333333334,
+        1.0
+      ]
+    },
+    "Contradiction Resistance": {
+      "total": 6,
+      "passed": 6,
+      "scores": [
+        0.6666666666666666,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.6666666666666666
+      ]
+    },
+    "Cross-Chunk Synthesis": {
+      "total": 6,
+      "passed": 4,
+      "scores": [
+        0.625,
+        0.2,
+        0.8,
+        0.0,
+        0.6666666666666666,
+        0.8333333333333334
+      ]
+    },
+    "Speaker Attribution": {
+      "total": 4,
+      "passed": 4,
+      "scores": [
+        1.0,
+        1.0,
+        0.75,
+        1.0
+      ]
+    },
+    "Negative / Trick": {
+      "total": 2,
+      "passed": 2,
+      "scores": [
+        0.6666666666666666,
+        0.6666666666666666
+      ]
+    },
+    "Killer Questions": {
+      "total": 10,
+      "passed": 9,
+      "scores": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.6666666666666666,
+        1.0,
+        1.0,
+        0.3333333333333333,
+        1.0,
+        0.6666666666666666
+      ]
+    }
+  },
+  "details": [
+    {
+      "id": "Q1",
+      "category": "Semantic Retrieval",
+      "question": "Why did one interviewee deliberately maintain the same wake-up routine even on a holiday?",
+      "expected": "Because they had an established routine and were already awake at 7:00 even though it was a holiday.",
+      "generated": "Based on the provided transcript, Speaker 1 maintains the same wake-up time (7:00 AM) even on a holiday because they have an established routine (`tengo una rutina establecida`) [00:44 - 00:53]. No additional reason is specified.",
+      "passed": true,
+      "score": 0.75
+    },
+    {
+      "id": "Q2",
+      "category": "Semantic Retrieval",
+      "question": "Why did the person who woke at 7:00 on the weekend consider that time normal despite it being a non-working day?",
+      "expected": "They had a stable routine and their alarm/routine caused them to get up at that time.",
+      "generated": "Based on the provided transcript, Speaker 1 considers waking up at 7:00 normal even on a holiday/non-working day because they have an **established routine** (\"tengo una rutina establecida\") [00:44 - 00:53].",
+      "passed": true,
+      "score": 0.6666666666666666
+    },
+    {
+      "id": "Q3",
+      "category": "Semantic Retrieval",
+      "question": "What was the underlying reason one participant could not simply sleep later on the day of the race?",
+      "expected": "They needed enough time to have breakfast, digest properly, and prepare for the race starting at 9:00.",
+      "generated": "Based on the provided transcript, the participant woke up early on the day of the race in Barcelona to ensure they had enough time to eat a proper breakfast and allow for adequate digestion before the race began at 9:15 AM [00:53 - 01:10]. Speaker 2 explicitly states they wanted to \"desayunar bien y hacer bien la digesti\u00f3n\" (have a good breakfast and digest it well) to properly prepare for the event.",
+      "passed": true,
+      "score": 1.0
+    },
+    {
+      "id": "Q4",
+      "category": "Semantic Retrieval",
+      "question": "Why did one person's early wake-up on a weekend happen accidentally rather than intentionally?",
+      "expected": "Their work alarm was still set from Monday\u2013Friday and they had forgotten to turn it off.",
+      "generated": "Based on the transcript, the early wake-up occurred accidentally because the person's work alarm (which is normally scheduled for Monday to Friday) went off, and they had forgotten to turn it off for the day [01:11 - 01:20, 01:16 - 01:29]. Speaker 2 explicitly states this was not intentional, but rather a result of leaving the weekday alarm active.",
+      "passed": true,
+      "score": 1.0
+    },
+    {
+      "id": "Q5",
+      "category": "Semantic Retrieval",
+      "question": "What does the transcript suggest is the practical relationship between someone's commute and their required wake-up time?",
+      "expected": "A longer preparation and commute time requires waking earlier; one person needed an hour to prepare, left at 7:20, spent 40 minutes on the metro, and arrived at work at 8:00.",
+      "generated": "Based on the transcript, the practical relationship is that a person's required wake-up time is calculated by working backward from their target arrival time, factoring in both their commute duration and personal preparation time. \n\nSpecifically, Speaker 1 explains that they need **one hour to get ready** and take a **40-minute metro ride** to work [01:39-01:52]. To arrive at work at 8:00 AM, they leave home at exactly 7:20 AM, which logically requires waking up around **6:15\u20136:20 AM** [01:33-01:43]. This demonstrates that the wake-up time must be set early enough to accommodate the full sequence of preparation plus travel time to meet a fixed work schedule.",
+      "passed": true,
+      "score": 0.75
+    },
+    {
+      "id": "Q6",
+      "category": "Semantic Retrieval",
+      "question": "Why does one interviewee prefer eating the same breakfast every day?",
+      "expected": "To avoid wasting time deciding what to eat.",
+      "generated": "Based on the provided transcript, **Speaker 2** prefers eating the same breakfast every day because it is a deeply ingrained, \"primordial routine\" for them. They explicitly state that without their usual two cups of coffee and classic breakfast items, \"my life is ruined\" (`si no mi vida est\u00e1 estropeada`) [03:12-03:24]. Additionally, they note that sticking to the same classic foods (like coffee with milk, toast with ham or jam, and pastries) is simply how it has always been for them (`Ya es de siempre`) [03:54-04:10].",
+      "passed": true,
+      "score": 0.5
+    },
+    {
+      "id": "Q7",
+      "category": "Semantic Retrieval",
+      "question": "How does the transcript distinguish between people who use routine as a necessity and someone who actively dislikes routine?",
+      "expected": "Some rely on routine for discipline, productivity, punctuality, or structure, while one participant explicitly describes themselves as 'anti-routine' and prefers deciding what to do moment by moment.",
+      "generated": "<think>\nHere's a thinking process:\n\n1.  **Analyze User Question:** The user asks: \"How does the transcript distinguish between people who use routine as a necessity and someone who actively dislikes routine?\"\n\n2.  **Scan Transcript for Keywords/Concepts:**\n   - Keywords: routine, necessity, dislike, antirrutina, met\u00f3dico, zona de confort, personalidad, creativo, cient\u00edfico.\n   - Look for contrasts between different attitudes toward routine.\n\n3.  **Extract Relevant Information from Transcript:**\n   - [06:54 - 07:06] Speaker 2 says: \"Para m\u00ed la rutina no es importante, al contrario, soy antirrutina. Si yo pudiera vivir sin ninguna rutina me encantar\u00eda. De hacer cada momento lo que me apetece en cada momento y un d\u00eda levantarme una hora, otro diferente.\" (Wait, this is Speaker 2 saying they are anti-routine. But later Speaker 2 says they *are* a person of routines. This seems like a contradiction or maybe different speakers are overlapping/misattributed in the transcript, or it's a conversation where they switch perspectives. Let's check carefully.)\n   - Actually, looking at the timestamps and speakers:\n     - [06:54-07:06] Speaker 2: \"Para m\u00ed la rutina no es importante, al contrario, soy antirrutina...\"\n     - [08:29-08:53] Speaker 2: \"Para m\u00ed s\u00ed, yo soy una persona de rutinas...\"\n     - [06:47-06:58] Speaker 1, Speaker 2: \"Porque si no, no entro. \u00bfPara ti es importante tener una rutina entre semana as\u00ed? Para m\u00ed la rutina no es importante, al contrario, soy antirrutina.\"\n     - [08:13-08:33] Speaker 2: \"S\u00ed, s\u00ed, sobre todo porque me gusta mucho dormir y si no tengo una rutina que sepa muy de memoria, llego tarde. Yo soy muy met\u00f3dico, soy una persona muy met\u00f3dica y porque esto es la rutina para m\u00ed es muy importante.\"\n     - [08:49-09:15] Speaker 2: \"...somos animales de rutina bueno me imagino que depender de la personalidad de cada uno Habr gente a lo mejor m creativa que a lo mejor es menos rutinaria y a lo mejor gente m\u00e1s, yo qu\u00e9 s\u00e9, es un poco clich\u00e9, \u00bfno?\"\n     - [09:11-09:22] Speaker 2, Speaker 1: \"...Pero a lo mejor personas m\u00e1s cient\u00edficas que a lo mejor necesitan una rutina, o a lo mejor es al rev\u00e9s, no lo s\u00e9, pero seg\u00fan la personalidad de cada uno,\"\n     - [03:12-03:24] Speaker 2: \"miro un poco las noticias para despertarme y entonces ya a por el metro. Es una rutina primordial, dos tazas de caf\u00e9 todas las ma\u00f1anas, si no mi vida est\u00e1 estropeada.\"\n\n   There's a clear contradiction in the transcript regarding Speaker 2's stance, likely due to overlapping speech, misattribution, or a conversational shift. However, the question asks how the *transcript* distinguishes between people who use routine as a necessity vs. those who actively dislike it. I need to focus on the explicit distinctions made in the text.\n\n   Key distinctions mentioned:\n   - **Anti-routine/Dislike:** Someone who prefers spontaneity, doing whatever they feel like at each moment, waking up at different times, and feels that breaking routine takes them out of their comfort zone (though the comfort zone part is actually linked to the pro-routine speaker feeling dislocated when routine breaks). Wait, let's parse carefully:\n     - [06:54-07:06] \"soy antirrutina... hacer cada momento lo que me apetece... levantarme una hora, otro diferente.\"\n   - **Pro-routine/Necessity:** Someone who is methodical, needs routine to avoid being late (especially to sleep in), feels dislocated/guilty when routine breaks, and believes routine depends on personality (e.g., creative people might be less routine-driven, while scientific/analytical people might need it more). Also mentions specific necessary routines like two cups of coffee to avoid a \"ruined\" day.\n   - The transcript explicitly links routine preference to **personality types**: creative people might be less routine-oriented, while scientific/analytical people might need routine more [08:49-09:22].\n   - It also contrasts the **emotional/functional impact**: For the routine-dependent person, breaking routine causes discomfort, dislocation, and guilt [08:29-08:53]. For the anti-routine person, spontaneity and flexibility are preferred [06:54-07:06].\n\n4.  **Synthesize Answer (Mental Refinement):**\n   Based on the transcript, the distinction is drawn along two main lines:\n   - **Attitude & Behavior:** Those who dislike routine (\"antirrutina\") prefer spontaneity, doing whatever they feel like in the moment, and varying their daily schedule (e.g., waking up at different times) [06:54-07:06]. In contrast, those who rely on routine are described as methodical, needing it to function properly (e.g., to avoid being late despite liking to sleep in) [08:13-08:33].\n   - **Personality & Emotional Response:** The transcript suggests routine preference depends on personality [08:49-09:22]. It speculates that creative individuals might be less routine-driven, while more scientific/analytical people might need structure. Additionally, when a routine-dependent person's schedule is disrupted, they feel outside their comfort zone, dislocated, or even guilty for not making the most of the morning [08:29-08:53]. Conversely, the anti-routine stance embraces flexibility without that discomfort.\n   - **Functional Necessity:** For the routine-dependent speaker, certain habits (like two morning coffees) are \"primordial,\" and without them, their day feels \"ruined\" [03:12-03:24].\n\n   I should note the apparent contradiction in Speaker 2's statements (claiming to be both \"antirrutina\" and a \"persona de rutinas/met\u00f3dico\"), which likely reflects overlapping dialogue or a shift in perspective during the conversation, but the transcript itself clearly contrasts the two mindsets as described above.\n\n5.  **Draft Response (English, grounded in transcript):**\n   Based on the provided transcript, the distinction between those who rely on routine and those who actively dislike it is drawn through their preferred lifestyle, emotional responses to disruption, and personality traits:\n\n   - **Preference for Spontaneity vs. Structure:** The person who dislikes routine describes themselves as \"anti-routine\" (\"antirrutina\"), preferring to act on impulse, do whatever they feel like at each moment, and wake up at different times each day [06:54\u201307:06]. In contrast, the routine-dependent individual is described as highly methodical and relies on a memorized schedule to function, particularly to avoid being late despite enjoying sleep [08:13\u201308:33].\n   - **Emotional & Psychological Impact:** When a routine is broken, the routine-dependent person feels displaced from their comfort zone, disoriented, and even guilty for not making the most of the morning [08:29\u201308:53]. The anti-routine perspective, however, embraces flexibility without this sense of disruption.\n   - **Personality-Based Distinction:** The transcript explicitly links routine preference to personality types, suggesting that creative individuals may be less routine-driven, while more scientific or analytical people might require structure [08:49\u201309:22]. \n   - **Functional Necessity:** For the routine-dependent speaker, certain habits are non-negotiable; for example, they state that two morning coffees are a \"primordial routine,\" and without it, their day feels \"ruined\" [03:12\u201303:24].\n\n   *(Note: The transcript contains overlapping or shifting statements from Speaker 2, who at one point claims to be \"anti-routine\" [06:54] and later describes themselves as highly methodical and routine-dependent [08:13, 08:29]. This likely reflects conversational overlap or a shift in perspective, but the text clearly contrasts the two mindsets as outlined above.)*\n\n6.  **Check against Constraints:**\n   - Answer clearly, directly, accurately in English? Yes.\n   - Reference timestamps and speakers? Yes.\n   - If not in transcript, state not specified? N/A here, all grounded.\n   - Precise on numbers, times, nuances? Yes.\n   - Cross-lingual rule followed? Yes.\n\n   The response is solid. I will output it. All points are directly tied to the transcript. I'll make sure the formatting is clean.\u2705\n   One minor thing: The transcript says \"Speaker 2\" for both the anti-routine and pro-routine quotes. I should acknowledge this accurately without overcomplicating, just as I did in the note. The question asks how the *transcript* distinguishes them, so focusing on the conceptual contrast presented is correct",
+      "passed": true,
+      "score": 0.6666666666666666
+    },
+    {
+      "id": "Q8",
+      "category": "Semantic Retrieval",
+      "question": "Why might breaking an established routine make someone feel psychologically uncomfortable according to the discussion?",
+      "expected": "It can make them feel outside their comfort zone, disoriented, as though they have not used the morning effectively, and sometimes even guilty.",
+      "generated": "According to Speaker 2, breaking an established routine can cause psychological discomfort because it pushes a person outside their comfort zone, which in turn makes them feel disoriented. Additionally, it can trigger feelings of guilt or the perception that they haven't made the most of their time (for example, feeling like they wasted the morning) [08:29 - 08:53].",
+      "passed": true,
+      "score": 1.0
+    },
+    {
+      "id": "Q9",
+      "category": "Multi-Hop Reasoning",
+      "question": "How are waking early, productivity, and punctuality connected across the discussion?",
+      "expected": "Early or fixed waking times create structure and provide more time to work; for people who need routine, it also helps prevent them from arriving late.",
+      "generated": "Based on the provided transcript, waking early, productivity, and punctuality are directly connected through the establishment of a consistent mental routine:\n\n* **Productivity:** Speaker 2 explicitly states that waking up early makes them feel more productive because it provides more hours to work [07:59 - 08:17].\n* **Punctuality & Routine:** Speaker 2 explains that waking up early (or at a set time) creates a sense of mental order and predictability. This fixed routine is crucial for avoiding lateness; they note that without a well-memorized daily schedule, they tend to arrive late, especially since they enjoy sleeping in [07:59 - 08:17].\n* **Supporting Context:** Other speakers reinforce the practical need for an early start, mentioning wake-up times like 5:00/5:30 AM or 6:15 AM to allow enough time for training, work, and preparation [01:56 - 02:02], [01:58 - 02:08], [01:33 - 01:43].\n\nIn summary, the discussion frames waking early as a foundational habit that structures the day, maximizes available working hours (boosting productivity), and eliminates daily uncertainty to ensure punctuality.",
+      "passed": true,
+      "score": 1.0
+    },
+    {
+      "id": "Q10",
+      "category": "Multi-Hop Reasoning",
+      "question": "How does the transcript connect breakfast with maintaining the rest of the day's schedule?",
+      "expected": "One participant says that if meal times start shifting later, everything else goes badly, so they sometimes skip breakfast and move directly to lunch to prevent the schedule from becoming delayed.",
+      "generated": "Based on the transcript, **Speaker 1** explicitly connects breakfast to maintaining the day's schedule by treating it as a foundational routine that sets the rhythm for everything else:\n\n* **Essential for continuing the day:** At `[03:36]`, Speaker 1 states, *\u201csi no desayuno bien no puedo seguir el d\u00eda\u201d* (if I don't have a good breakfast, I can't continue the day).\n* **Prevents a domino effect of delays:** At `[05:42\u201306:11]`, Speaker 1 explains that they try to keep meal times consistent, even if they wake up late after staying out. If breakfast is skipped or pushed back, they may go straight to lunch, but the underlying rule is: *\u201cPorque si empieza a ir todo tarde luego todo va mal\u201d* (Because if everything starts late, then everything goes wrong). Breakfast acts as the anchor that stops the entire schedule from derailing.\n* **Impacts mood and productivity:** At `[05:32]`, Speaker 1 notes that skipping breakfast can negatively affect your state of mind (*\u201cte pone de malas\u201d*), which further disrupts the day's flow.\n\nIn short, the transcript frames breakfast not just as a meal, but as a scheduling anchor: maintaining it (or at least keeping meal times consistent) prevents cascading delays and keeps the rest of the day on track.",
+      "passed": true,
+      "score": 0.75
+    },
+    {
+      "id": "Q11",
+      "category": "Multi-Hop Reasoning",
+      "question": "What chain of reasoning explains why one person gets up early specifically to play golf?",
+      "expected": "They sometimes play golf in the morning, get up early for it, and then need to work afterward.",
+      "generated": "Based on the transcript, **Speaker 1** explains that they wake up early on certain days specifically to play golf because **they have to work later in the day** [06:20-06:37]. \n\nThe chain of reasoning is straightforward:\n1. They want to play golf in the morning.\n2. Since they have work commitments later, they must wake up early to fit the game in before their workday begins.\n3. Before heading out, they check the weather forecast to ensure conditions are suitable.\n4. After golf, they typically follow up with either swimming or English classes.\n\nThis routine allows Speaker 1 to maintain their recreational activities without conflicting with their professional responsibilities.",
+      "passed": true,
+      "score": 1.0
+    },
+    {
+      "id": "Q12",
+      "category": "Multi-Hop Reasoning",
+      "question": "How does one participant's morning routine combine personal relaxation with preparation for work?",
+      "expected": "They make coffee, sit on the terrace overlooking a natural park/forest, take some quiet time, then continue with their morning routine and eventually go to the metro/work.",
+      "generated": "Based on the transcript, **Speaker 2** combines personal relaxation with work preparation by deliberately setting aside quiet, nature-focused time in the morning before starting their day. At **[02:43\u201302:55]**, they explain that after waking up, they have a quiet coffee and a shower. They then go to the kitchen to prepare coffee, step out onto their terrace (which overlooks a mountain and natural park), and relax by watching the forest while drinking it. This peaceful routine gives them the personal time they need to mentally prepare before heading off to work.",
+      "passed": true,
+      "score": 1.0
+    },
+    {
+      "id": "Q13",
+      "category": "Multi-Hop Reasoning",
+      "question": "How does the transcript connect coffee consumption with emotional or functional dependence?",
+      "expected": "Several participants describe coffee as essential; one says they cannot live without it, another drinks two cups every morning, and skipping it is described as negatively affecting their life/day.",
+      "generated": "Based on the provided transcript, coffee consumption is explicitly tied to both functional and emotional dependence, primarily through **Speaker 2**'s statements:\n\n* **Functional Dependence:** Speaker 2 states, `\"Sin caf\u00e9 no puedo vivir\"` (`\"Without coffee I cannot live\"`) [02:51-03:16], framing coffee as an essential, non-negotiable requirement to physically and mentally start the day.\n* **Emotional Dependence:** Speaker 2 describes drinking two cups of coffee every morning as a `\"rutina primordial\"` (`\"primordial/essential routine\"`) and emphasizes the emotional stakes by saying, `\"si no mi vida est\u00e1 estropeada\"` (`\"if not, my life is ruined\"`) [03:12-03:24]. This indicates that coffee is deeply tied to their daily emotional well-being and sense of stability.\n\nTogether, these remarks show that for Speaker 2, coffee is not merely a beverage but a critical psychological and functional anchor that dictates how successfully they can navigate their day.",
+      "passed": true,
+      "score": 0.6666666666666666
+    },
+    {
+      "id": "Q14",
+      "category": "Multi-Hop Reasoning",
+      "question": "How do the morning and evening routines reveal two different approaches to planning?",
+      "expected": "In the morning, routines organize preparation for work/day activities; in the evening, one person explicitly writes down the next day's unfinished tasks so the following day is clear.",
+      "generated": "Based on the provided transcript, **there is no mention of evening routines or a comparison between morning and evening planning approaches**. The audio exclusively discusses morning routines and waking-up habits.\n\nRegarding morning planning, both speakers describe a highly structured, routine-driven approach:\n- **Speaker 2** identifies as very methodical and relies on a fixed morning routine to ensure punctuality and productivity, noting that without it, they tend to be late because they enjoy sleeping [07:59\u201308:33]. However, they clarify that their routine doesn't make them completely rigid, as they will still drop everything for spontaneous plans if invited [08:13\u201308:33].\n- **Speaker 1** wakes up around 6:15 AM and emphasizes that if the morning starts late, the rest of the day tends to go wrong [01:33\u201301:43, 06:07\u201306:24]. Their structured morning includes 10 minutes of meditation via an app, checking the weather forecast, and attending activities like golf, swimming, or English classes [06:07\u201306:37].\n\nSince the transcript does not cover evening routines or contrast different planning styles between morning and evening, I cannot address that specific comparison. Let me know if you'd like a deeper analysis of the morning routines described!",
+      "passed": true,
+      "score": 1.0
+    },
+    {
+      "id": "Q15",
+      "category": "Multi-Hop Reasoning",
+      "question": "What evidence suggests that routine can be both restrictive and beneficial?",
+      "expected": "One participant dislikes routine because they want freedom to decide what to do spontaneously, while others say routine provides discipline, productivity, security, punctuality, and mental order.",
+      "generated": "Based on the provided transcript, Speaker 2 highlights both the restrictive and beneficial sides of routine, noting that its impact largely depends on individual personality:\n\n**Restrictive/Challenging Aspects:**\n- Speaker 2 personally identifies as \"anti-routine\" and expresses a desire to live without fixed schedules, preferring to do whatever they feel like each day and wake up at different times [06:54-07:06].\n- They admit that maintaining routines is difficult, specifically citing their struggle to stay disciplined with gym visits [07:29-08:03].\n- When a routine is broken, it can push people out of their comfort zone and leave them feeling disoriented or \"out of place\" [08:29-08:53].\n\n**Beneficial Aspects:**\n- Despite personal struggles, Speaker 2 acknowledges that routines are important for establishing discipline, especially when working toward specific goals [07:29-08:03].\n- They describe routine as a form of \"mental order\" that helps structure daily life [07:29-08:03].\n- For methodical individuals, routines serve practical purposes, such as ensuring they wake up on time and avoid being late, especially when they prefer to sleep in [08:13-08:33].\n- Speaker 2 concludes that humans are naturally \"creatures of habit,\" and whether a routine feels restrictive or helpful ultimately depends on each person's personality [08:49-09:15].\n\nIn summary, the transcript shows that while routines can feel limiting or hard to maintain, they also provide mental structure, discipline, and practical reliability, with the overall experience varying by individual temperament.",
+      "passed": true,
+      "score": 1.0
+    },
+    {
+      "id": "Q16",
+      "category": "Multi-Hop Reasoning",
+      "question": "How does the transcript connect personality with preference for routine?",
+      "expected": "The speakers speculate that personality influences whether someone benefits from routine; they suggest some people may be more creative and less routine-oriented while others may prefer structure, though they acknowledge this is somewhat clich\u00e9d/speculative.",
+      "generated": "Based on the provided transcript, the connection between personality and routine preference is framed as highly individual and trait-dependent:\n\n* **Methodical personalities thrive on routine:** Speaker 2 explicitly identifies as \"very methodical\" and states that routine is extremely important to them, as it helps them stay on schedule and avoid feeling disoriented or guilty about unproductive mornings [08:13, 08:29].\n* **Personality dictates routine needs:** Speaker 2 speculates that routine preference depends on each person's personality. They suggest that more creative individuals might be less routine-oriented, while more \"scientific\" personalities might need routines more, though they acknowledge this could be a clich\u00e9 or even the opposite [08:49, 09:11].\n* **Anti-routine personalities prefer spontaneity:** The transcript also presents a contrasting personality type that is \"anti-routine,\" preferring to act on impulse, wake up at different times, and do whatever feels right in the moment rather than following a set structure [06:54].\n\nIn summary, the transcript connects personality to routine by suggesting that structured, methodical individuals rely on routines for comfort and efficiency, while creative or spontaneous personalities may find routines restrictive and prefer flexibility.",
+      "passed": true,
+      "score": 1.0
+    },
+    {
+      "id": "Q17",
+      "category": "Numerical / Temporal",
+      "question": "What is the difference between the earliest and latest weekend wake-up times explicitly mentioned?",
+      "expected": "3 to 3.5 hours: 6:30 AM is the earliest and 9:45 or 10:00 AM are the latest mentioned weekend wake-up times.",
+      "generated": "<think>\nHere's a thinking process:\n\n1.  **Analyze User Question:** The user asks: \"What is the difference between the earliest and latest weekend wake-up times explicitly mentioned?\" in English, based on the provided Spanish audio transcript.\n\n2.  **Scan Transcript for Keywords:** Look for mentions of wake-up times, specifically on weekends (fin de semana, s\u00e1bado, domingo, hoy).\n   - [00:30 - 00:43] Speaker 1: \"Mira, pues yo hoy me he levantado a las 9 y 45 horas de la ma\u00f1ana Hoy me levant\u00e9 a las 10 de la ma\u00f1ana, s\u00e1bado pude dormir, s\u00ed A 6 y media\" (Wait, this is a bit jumbled in the transcript, but mentions 9:45, 10:00, and 6:30)\n   - [00:22 - 00:34] Speaker 2, Speaker 1: \"\u00bfA qu\u00e9 hora os levantasteis hoy? Un poco tarde hoy, es fin de semana, a las 9 Mira, pues yo hoy me he levantado a las 9 y 45 horas de la ma\u00f1ana\" (Mentions 9:00 and 9:45)\n   - [01:16 - 01:29] Speaker 2, Speaker 1: Mentions alarm from work, weekdays.\n   - [01:56 - 02:02] Speaker 2, Speaker 1: \"\u00bfCinco? A las cinco, cinco y media, s\u00ed. \u00bfPor qu\u00e9 tan temprano?\" (Mentions 5:00, 5:30)\n   - [01:51 - 02:00] Speaker 2: \"S\u00ed, que es lo habitual, s\u00ed. Me levanto a las cinco. \u00bfCinco?\" (Mentions 5:00)\n   - [01:48 - 01:55] Speaker 1, Speaker 2: \"Sobre las 6, 6 y cuarto de la ma\u00f1ana. Mucho m\u00e1s temprano. S\u00ed, que es lo habitual, s\u00ed.\" (Mentions 6:00, 6:15)\n   - [01:25 - 01:37] Speaker 1: \"Normalmente a las 8, 8 y media quiz\u00e1s. Nos solimos levantar a las 7, de lunes a viernes. A las 6 y cuarto de la ma\u00f1ana.\" (Weekdays)\n\n3.  **Identify Weekend Wake-up Times:**\n   - The transcript explicitly mentions weekend/today wake-up times:\n     - \"Un poco tarde hoy, es fin de semana, a las 9\" -> 9:00 AM\n     - \"yo hoy me he levantado a las 9 y 45 horas de la ma\u00f1ana\" -> 9:45 AM\n     - \"Hoy me levant\u00e9 a las 10 de la ma\u00f1ana, s\u00e1bado pude dormir, s\u00ed\" -> 10:00 AM\n     - There's also \"A 6 y media\" mentioned in the same block, but it's unclear if it's weekend or weekday. Given the context \"s\u00e1bado pude dormir, s\u00ed A 6 y media\", it might be a separate thought or a correction, but the explicit weekend mentions are 9:00, 9:45, and 10:00.\n     - Let's stick to the clearest explicit weekend mentions: 9:00 AM and 10:00 AM. (9:45 is also mentioned for \"hoy\" which is weekend).\n     - Earliest weekend time explicitly mentioned: 9:00 AM (\"a las 9\")\n     - Latest weekend time explicitly mentioned: 10:00 AM (\"a las 10 de la ma\u00f1ana\")\n     - Difference: 1 hour.\n\n   Wait, let's re-read carefully:\n   [00:22 - 00:34] Speaker 2: \"\u00bfA qu\u00e9 hora os levantasteis hoy?\" Speaker 1: \"Un poco tarde hoy, es fin de semana, a las 9\"\n   [00:30 - 00:43] Speaker 1: \"Mira, pues yo hoy me he levantado a las 9 y 45 horas de la ma\u00f1ana Hoy me levant\u00e9 a las 10 de la ma\u00f1ana, s\u00e1bado pude dormir, s\u00ed A 6 y media\"\n   The transcript seems to have overlapping/correction speech. It mentions 9:00, 9:45, and 10:00 for the weekend/today.\n   Earliest: 9:00 AM\n   Latest: 10:00 AM\n   Difference: 1 hour.\n\n   Let's check if 6:30 is weekend. \"s\u00e1bado pude dormir, s\u00ed A 6 y media\" might mean on Saturday they slept in, but then says 6:30? Actually, it's likely a transcription artifact. I will stick to the clearest explicit weekend times: 9:00 and 10:00. The difference is 1 hour. If 9:45 is considered, the difference between 9:00 and 10:00 is still 1 hour. If 6:30 is weekend, the difference would be 3.5 hours, but it's ambiguous. I'll state the explicit times mentioned for the weekend: 9:00 AM and 10:00 AM, making the difference 1 hour. I will also mention 9:45 AM as another explicit mention.\n\n   Let's calculate precisely: 10:00 - 9:00 = 1 hour.\n   I will explicitly state the times found in the transcript and the calculated difference.\n\n   Transcript references:\n   - [00:22] Speaker 1 says they woke up at 9:00 AM on the weekend (\"es fin de semana, a las 9\").\n   - [00:30] Speaker 1 mentions waking up at 9:45 AM and 10:00 AM today/Saturday.\n   - Earliest: 9:00 AM\n   - Latest: 10:00 AM\n   - Difference: 1 hour.\n\n   I will formulate the answer clearly, referencing timestamps and speakers, and note the ambiguity if necessary, but stick to the explicit numbers.\n\n   Structure:\n   - Identify earliest weekend wake-up time explicitly mentioned: 9:00 AM [00:22]\n   - Identify latest weekend wake-up time explicitly mentioned: 10:00 AM [00:30]\n   - Calculate difference: 1 hour.\n   - Mention 9:45 AM as another explicit mention for context.\n   - State clearly based on transcript.\n\n   Check rules: Answer in English, reference timestamps/speakers, be precise.\n   All good.\n   Draft: Based on the transcript, the earliest explicitly mentioned weekend wake-up time is 9:00 AM (Speaker 1 at [00:22]), and the latest is 10:00 AM (Speaker 1 at [00:30]). The difference between these two times is exactly 1 hour. (Note: Speaker 1 also explicitly mentions waking up at 9:45 AM on the weekend at [00:30], but the range between the earliest and latest stated times remains 1 hour.)\n   This matches the prompt requirements. I'll output this.\u2705\n   Self-Correction/Refinement during thought: \n   Wait, let's look at the exact wording: \"Un poco tarde hoy, es fin de semana, a las 9\" -> 9:00.\n   \"Hoy me levant\u00e9 a las 10 de la ma\u00f1ana, s\u00e1bado pude dormir, s\u00ed\" -> 10:00.\n   Difference is 1 hour.\n   I will keep it concise. All constraints met.\u2705\n   Output matches draft. \n   Proceed. \n   [Output Generation] -> \"Based on the provided transcript, the earliest explicitly mentioned weekend wake-up time is **9:00 AM** (Speaker 1 at [00:22]), and the latest is **10:00 AM** (Speaker 1 at [00:30]). The difference between these two times is **1 hour**. (Note: Speaker 1 also mentions waking up at 9:45 AM on the weekend at [00:30], but the span between the earliest and latest stated times remains 1 hour.)\" -> Matches perfectly.\u2705\n   Final check of the prompt: \"What is the difference between the earliest and latest weekend wake-up times explicitly mentioned?\" -> 1 hour. All good. \n   Output matches. \n   [Proceeds]\n   *(Self-Correction/Verification during drafting)*: \n   Let's double check the transcript text for [00:30 - 00:43]: \"Mira, pues yo hoy me he levantado a las 9 y 45 horas de la ma\u00f1ana Hoy me levant\u00e9 a las 10 de la ma\u00f1ana, s\u00e1bado pude dormir, s\u00ed A 6 y media\". This is clearly a messy transcript with overlapping/corrections. The explicit weekend times are 9:00, 9:45, and",
+      "passed": true,
+      "score": 1.0
+    },
+    {
+      "id": "Q18",
+      "category": "Numerical / Temporal",
+      "question": "Which person had the earliest stated weekday wake-up time, and why did they wake that early?",
+      "expected": "One participant wakes at 5:00\u20135:30 because they train and also go to work / need to start work very early.",
+      "generated": "<think>\nHere's a thinking process:\n\n1.  **Analyze User Question:**\n   - **Question:** Which person had the earliest stated weekday wake-up time, and why did they wake that early?\n   - **Key Elements:** \n     - Identify the person (Speaker 1 or Speaker 2)\n     - Find the earliest stated *weekday* wake-up time\n     - Explain *why* they woke that early\n\n2.  **Scan Transcript for Relevant Information:**\n   - I need to look for mentions of weekday wake-up times and reasons for waking up early.\n   - Let's extract all wake-up times and contexts:\n     - `[01:56 - 02:02]`: \"\u00bfCinco? A las cinco, cinco y media, s\u00ed. \u00bfPor qu\u00e9 tan temprano?\" (Five? At five, five thirty, yes. Why so early?)\n     - `[01:16 - 01:29]`: \"No, me ha sonado la alarma porque la ten\u00eda del trabajo, de lunes a viernes y claro, pues hoy no la hab\u00eda quitado. \u00bfEntre semana a qu\u00e9 hora te levantas? Normalmente a las 8, 8 y media quiz\u00e1s.\" (No, my alarm went off because I had it set for work, Monday to Friday, and of course, I hadn't turned it off today. What time do you wake up on weekdays? Normally at 8, maybe 8:30.)\n     - `[01:06 - 01:15]`: \"A las 8, el cuarto. Bastante temprano para mi semana. S\u00ed, muy temprano.\" (At 8:15. Quite early for my week. Yes, very early.)\n     - `[01:25 - 01:37]`: \"Normalmente a las 8, 8 y media quiz\u00e1s. Nos solimos levantar a las 7, de lunes a viernes. A las 6 y cuarto de la ma\u00f1ana.\" (Normally at 8, maybe 8:30. We usually wake up at 7, Monday to Friday. At 6:15 in the morning.)\n     - `[01:11 - 01:20]`: \"S\u00ed, muy temprano. \u00bfY siempre te levantas a esa hora? No, me ha sonado la alarma porque la ten\u00eda del trabajo, de lunes a viernes y claro, pues hoy no la hab\u00eda quitado.\" (Yes, very early. And do you always wake up at that time? No, my alarm went off because I had it set for work, Monday to Friday, and of course, I hadn't turned it off today.)\n     - `[00:22 - 00:34]`: \"\u00bfA qu\u00e9 hora os levantasteis hoy? Un poco tarde hoy, es fin de semana, a las 9 Mira, pues yo hoy me he levantado a las 9 y 45 horas de la ma\u00f1ana\" (What time did you wake up today? A bit late today, it's the weekend, at 9. Well, I woke up today at 9:45 in the morning.)\n     - `[00:30 - 00:43]`: \"Mira, pues yo hoy me he levantado a las 9 y 45 horas de la ma\u00f1ana Hoy me levant\u00e9 a las 10 de la ma\u00f1ana, s\u00e1bado pude dormir, s\u00ed A 6 y media\" (Well, I woke up today at 9:45 in the morning. I woke up at 10 in the morning today, Saturday I could sleep, yes. At 6:30.)\n     - `[01:51 - 02:00]`: \"S\u00ed, que es lo habitual, s\u00ed. Me levanto a las cinco. \u00bfCinco?\" (Yes, that's usual, yes. I wake up at five. Five?)\n\n   - Let's map speakers to times/reasons:\n     - The transcript has overlapping/interleaved dialogue, but I can piece it together.\n     - Speaker 2 mentions waking up at 5:00 or 5:30 (`[01:51-02:00]`, `[01:56-02:02]`).\n     - Speaker 1 mentions waking up at 6:15 (`[01:25-01:37]` \"A las 6 y cuarto de la ma\u00f1ana\") or 6:30 (`[00:30-00:43]` \"A 6 y media\").\n     - Speaker 1 also mentions normally waking up at 8 or 8:30 on weekdays (`[01:16-01:29]`, `[01:25-01:37]`).\n     - The reason for waking up early (specifically at 5:00/5:30 or 6:15/6:30 on a weekend/day off) is explicitly stated: \"me ha sonado la alarma porque la ten\u00eda del trabajo, de lunes a viernes y claro, pues hoy no la hab\u00eda quitado.\" (My alarm went off because I had it set for work, Monday to Friday, and of course, I hadn't turned it off today.) This is said by Speaker 1 (`[01:16-01:29]`, `[01:11-01:20]`). Wait, let's check the speaker tags carefully.\n     - `[01:16 - 01:29] (Speaker 2, Speaker 1)`: The text says \"No, me ha sonado la alarma porque la ten\u00eda del trabajo, de lunes a viernes y claro, pues hoy no la hab\u00eda quitado. \u00bfEntre semana a qu\u00e9 hora te levantas? Normalmente a las 8, 8 y media quiz\u00e1s.\" This seems to be Speaker 1 answering why they woke up early, then Speaker 2 asking about weekday times.\n     - `[01:51 - 02:00] (Speaker 2)`: \"S\u00ed, que es lo habitual, s\u00ed. Me levanto a las cinco. \u00bfCinco?\" This is Speaker 2 stating they usually wake up at 5.\n     - Wait, the question asks: \"Which person had the earliest stated weekday wake-up time, and why did they wake that early?\"\n     - Let's re-read carefully. The transcript is a bit messy with overlapping tags, but I can deduce:\n       - Speaker 2 says: \"Me levanto a las cinco.\" (I wake up at five.) `[01:51-02:00]`\n       - Speaker 1 says: \"A las 6 y cuarto de la ma\u00f1ana.\" (At 6:15 in the morning.) `[01:25-01:37]`\n       - The reason for waking up early (on a weekend/day off) is given by Speaker 1: \"me ha sonado la alarma porque la ten\u00eda del trabajo, de lunes a viernes y claro, pues hoy no la hab\u00eda quitado.\" (My alarm went off because I had it set for work, Monday to Friday, and I hadn't turned it off.) `[01:16-01:29]`, `[01:11-01:20]`\n       - Wait, the question says \"earliest stated weekday wake-up time\". Actually, the 5:00 time is stated as habitual (\"que es lo habitual, s\u00ed. Me levanto a las cinco.\"). So Speaker 2's habitual weekday wake-up time is 5:00.\n       - But the reason \"why did they wake that early?\" might refer to the specific instance mentioned in the transcript where someone woke up early unexpectedly. The transcript says: \"No, me ha sonado la alarma porque la ten\u00eda del trabajo, de lunes a viernes y claro, pues hoy no la hab\u00eda quitado.\" This explains why they woke up early *today* (which is a weekend/day off), not necessarily why they wake up early on weekdays.\n       - Let's check the exact wording of the question: \"Which person had the earliest stated weekday wake-up time, and why did they wake that early?\"\n       - It could be referring to Speaker 2, who says they usually wake up at 5:00 (`[01:51-02:00]`). But the reason for waking up early is explicitly tied to the alarm set for work that wasn't turned off (`[01:16-01:29]`). Actually, the person who woke up early *today* (at 5:00/5:30 or 6:15) is Speaker 1, because of the work alarm. Wait, let's look at the flow:\n         - `[00:22-00:34]`: Speaker 2 asks what time they woke up today. Speaker 1 says 9:45. Speaker 2 says 9.\n         - `[00:30-00:43]`: Speaker 1 says 9:45. Speaker 2 says 10. Then mentions 6:30? This is messy.\n         - Let's stick to the clearest parts:\n           - Speaker 2 states a habitual wake-up time of 5:00 (`[01:51-02:00]`).\n           - Speaker 1 explains waking up early",
+      "passed": true,
+      "score": 0.75
+    },
+    {
+      "id": "Q19",
+      "category": "Numerical / Temporal",
+      "question": "If someone leaves home at exactly 7:20 and spends 40 minutes on the metro, what arrival time does the transcript imply?",
+      "expected": "8:00 AM.",
+      "generated": "The transcript states that the person \u201csalgo de casa a las\u202f7\u202fy\u202f20\u202fexacto,\u202f40\u202fminutos de metro y a las\u202f8\u202fllego al trabajo.\u201d\u202fThis means that leaving home at 7:20\u202fam and taking a 40\u2011minute metro ride results in an arrival time of **8:00\u202fam**\u301001:39\u201101:52, Speaker\u202f1\u3011.",
+      "passed": true,
+      "score": 1.0
+    },
+    {
+      "id": "Q20",
+      "category": "Numerical / Temporal",
+      "question": "How much earlier does the 5:00 AM wake-up occur compared with the person who normally wakes at 8:00\u20138:30?",
+      "expected": "3 to 3.5 hours earlier.",
+      "generated": "Based on the transcript, Speaker 2 wakes up at 5:00 AM [01:51-02:00], while Speaker 1 normally wakes up between 8:00 and 8:30 AM [01:25-01:37]. Therefore, the 5:00 AM wake-up occurs **3 to 3.5 hours earlier** than the 8:00\u20138:30 AM wake-up.",
+      "passed": true,
+      "score": 1.0
+    },
+    {
+      "id": "Q21",
+      "category": "Numerical / Temporal",
+      "question": "What sequence of times is associated with the person whose routine involves the metro commute?",
+      "expected": "Wake around 6:00\u20136:15 \u2192 spend about an hour preparing \u2192 leave at exactly 7:20 \u2192 40-minute metro journey \u2192 arrive at work at 8:00.",
+      "generated": "Based on the provided transcript, **Speaker 1** outlines the following sequence of times for their routine that includes the metro commute [01:39 - 01:52]:\n\n* **~6:00 / 6:15 AM:** Wakes up and begins preparing (needs about an hour to get ready).\n* **7:20 AM:** Leaves home exactly.\n* **40 minutes:** Metro commute duration.\n* **8:00 AM:** Arrives at work.\n\n*(Note: Speaker 2 also mentions taking the metro [03:12 - 03:24], but does not provide a specific sequence of times for their commute.)*",
+      "passed": true,
+      "score": 0.8333333333333334
+    },
+    {
+      "id": "Q22",
+      "category": "Numerical / Temporal",
+      "question": "What alarm times does one participant mention checking before going to sleep?",
+      "expected": "8:00, 8:05, and 8:15.",
+      "generated": "Based on the provided transcript, Speaker 2 mentions checking multiple alarms set for **8:00, 8:05, and 8:15** as the last thing they do before going to sleep [11:00 - 11:12].",
+      "passed": true,
+      "score": 1.0
+    },
+    {
+      "id": "Q23",
+      "category": "Contradiction Resistance",
+      "question": "Did everyone interviewed consider having a fixed routine important? Explain using contrasting evidence.",
+      "expected": "No. One person explicitly says they are 'anti-routine' and would prefer having no routine, while others describe routine as important for discipline, productivity, punctuality, mental order, or security.",
+      "generated": "No, not everyone considered a fixed routine important. The transcript presents clear contrasting perspectives, primarily from Speaker 2 across different segments:\n\n* **Against routine:** At `[06:54]`, Speaker 2 explicitly states, *\"Para m\u00ed la rutina no es importante, al contrario, soy antirrutina\"* (For me, routine is not important, on the contrary, I am anti-routine). They express a strong preference for spontaneity, saying they would love to live without any routine and do whatever they feel like at any given moment.\n* **In favor of routine:** Conversely, at `[07:29]`, Speaker 2 acknowledges that routine is important for building discipline and creating *\"orden mental\"* (mental order), especially when working toward specific goals. Furthermore, at `[08:13]`, Speaker 2 strongly affirms that routine is *\"muy importante\"* (very important), describing themselves as a *\"persona muy met\u00f3dica\"* (very methodical person) who relies on routines to avoid being late and to structure their day effectively.\n\nTherefore, the interviews highlight a direct contrast between a personal desire for flexibility and a recognition of",
+      "passed": true,
+      "score": 0.6666666666666666
+    },
+    {
+      "id": "Q24",
+      "category": "Contradiction Resistance",
+      "question": "Is the transcript's discussion of routine presented as an established scientific conclusion about personality?",
+      "expected": "No. The speakers speculate that personality may influence routine preferences and explicitly acknowledge that the idea may be clich\u00e9d.",
+      "generated": "No, the discussion is not presented as an established scientific conclusion. At [09:11 - 09:22], Speaker 2 explicitly expresses uncertainty, stating `\"o a lo mejor es al rev\u00e9s, no lo s\u00e9\"` (or maybe it's the opposite, I don't know), and openly acknowledges the idea as a guess or stereotype by adding `\"es un poco clich\u00e9, \u00bfno?\"` (it's a bit of a clich\u00e9, right?). While they speculate that routine preferences may vary `\"seg\u00fan la personalidad de cada uno\"` (depending on each person's personality), they clearly frame it as a personal observation rather than a proven scientific fact.",
+      "passed": true,
+      "score": 1.0
+    },
+    {
+      "id": "Q25",
+      "category": "Contradiction Resistance",
+      "question": "Did the person who described themselves as anti-routine say they were unable to work from home?",
+      "expected": "No. They specifically say they can work from home and therefore their work pattern varies between home, office, client visits, and projects.",
+      "generated": "No. The person who described themselves as anti-routine (Speaker 2 at [06:54]) actually stated the opposite. At [07:11], Speaker 2 explicitly said, *\"laboralmente puedo trabajar desde casa\"* (professionally I can work from home).",
+      "passed": true,
+      "score": 1.0
+    },
+    {
+      "id": "Q26",
+      "category": "Contradiction Resistance",
+      "question": "Was the person who woke at 7:00 necessarily waking that early because of work?",
+      "expected": "No. The transcript says they had a stable routine even though it was a holiday.",
+      "generated": "Based on the provided transcript, the person who wakes at 7:00 (Speaker 1) attributes it to having an **\"established routine\"** that they follow even on holidays, rather than explicitly for work [00:44 - 00:53]. Therefore, it was not necessarily because of work; it appears to be a personal habit.",
+      "passed": true,
+      "score": 1.0
+    },
+    {
+      "id": "Q27",
+      "category": "Contradiction Resistance",
+      "question": "Did the participant who exercises early say that exercising was the only reason they woke early?",
+      "expected": "No. They say they train and also go to work; another participant discusses getting up early for golf and then working.",
+      "generated": "No. According to the transcript at [01:58 - 02:08], the participant explicitly stated two reasons for waking up early: to train/exercise (`\"me entreno\"`) and to go to work (`\"tambi\u00e9n voy a trabajar\"`). Therefore, exercising was not the only reason.",
+      "passed": true,
+      "score": 1.0
+    },
+    {
+      "id": "Q28",
+      "category": "Contradiction Resistance",
+      "question": "Does the transcript say that everyone drinks the same type of coffee?",
+      "expected": "No. Preferences include American-style coffee, espresso, coffee with milk, and coffee prepared with an Italian moka pot.",
+      "generated": "No, the transcript does not say that everyone drinks the same type of coffee. In fact, the speakers explicitly mention different preferences:\n- **Speaker 1** drinks it black and as an espresso: `\"Solo, expreso, siempre, siempre\"` [03:22-03:33].\n- **Speaker 2** drinks it with milk: `\"Hoy yo desayuno mi caf\u00e9 con leche...\"` [03:54-04:10].\n\nAdditionally, Speaker 1 notes a specific preparation method, mentioning they make it `\"en la t\u00edpica cafetera italiana\"` [03:29-03:40]. Therefore, their coffee preferences and preparation styles differ.",
+      "passed": true,
+      "score": 0.6666666666666666
+    },
+    {
+      "id": "Q29",
+      "category": "Cross-Chunk Synthesis",
+      "question": "What are the different purposes for which participants use their morning time, and how do these purposes vary?",
+      "expected": "They use mornings for work preparation, commuting, exercise/training, golf, swimming, English classes, meditation, checking the weather/news, breakfast, coffee, and quiet personal time.",
+      "generated": "<think>\nHere's a thinking process:\n\n1.  **Analyze User Question:**\n   - **Question:** What are the different purposes for which participants use their morning time, and how do these purposes vary?\n   - **Key Elements:** Identify purposes for morning time usage, note variations among participants, ground strictly in the provided Spanish transcript.\n\n2.  **Scan Transcript for Relevant Information:**\n   - [06:07 - 06:24] Speaker 1: Mentions meditation (10 mins daily via app), playing golf in the mornings, waking up early to play.\n   - [01:56 - 02:02] Speaker 2 & 1: Discuss waking up at 5:00 or 5:30 AM. Speaker 2 asks why so early.\n   - [06:20 - 06:37] Speaker 1: Repeats golf, waking up early to play because they have to work later. Checks weather forecast. Goes swimming or to English classes.\n   - [00:49 - 00:57] Speaker 1 & 2: Waking up at 7 AM on weekends. Reason: Race in Barcelona, need time to eat breakfast well and digest properly.\n   - [00:53 - 01:10] Speaker 2: Confirms race in Barcelona, need time to prepare for race starting at 9:08 AM.\n   - [01:33 - 01:43] Speaker 1: Wakes up at 6:15 AM (or 6:20 AM). Needs an hour to prepare before work.\n   - [02:04 - 02:16] Speaker 2: Early riser, wakes up early to work many hours, needs to start early to make it work. Asks what they do right after.\n   - [02:43 - 02:55] Speaker 2: After waking up, drinks coffee calmly, showers, likes having time before the day starts. Goes to kitchen, makes coffee, goes to terrace overlooking mountains/natural park, looks at forest, drinks coffee. Enjoys it in summer, stays warm in winter.\n\n3.  **Synthesize Findings (Mental Draft):**\n   - **Speaker 1's purposes:**\n     - Meditation (10 mins daily via app) [06:07]\n     - Playing golf (wakes up early specifically for this) [06:07, 06:20]\n     - Checking weather forecast [06:20]\n     - Swimming or attending English classes [06:20]\n     - Preparing for work (needs an hour to get ready) [01:33]\n     - Waking up at 7 AM on weekends for a race in Barcelona (to eat breakfast and digest properly) [00:49, 00:53]\n   - **Speaker 2's purposes:**\n     - Waking up early (5:00/5:30 AM) to work many hours and start early to make the schedule work [02:04]\n     - Preparing for a race in Barcelona (starting at 9:08 AM) by eating breakfast and digesting [00:53]\n     - Enjoying a calm morning routine: drinking coffee, showering, spending time on the terrace overlooking a mountain/natural park, enjoying the view [02:43]\n   - **Variations:**\n     - Speaker 1 focuses more on structured activities (meditation, golf, swimming, English classes, work prep, race prep).\n     - Speaker 2 focuses on work demands, race preparation, and a relaxed, reflective morning routine (coffee, nature view).\n     - Both mention waking up early for work/races, but their leisure/health activities differ. Speaker 1 is more activity-oriented; Speaker 2 is more routine/relaxation-oriented.\n\n4.  **Check Against Constraints:**\n   - Answer in English? Yes.\n   - Reference timestamps and speakers? Yes.\n   - Strictly grounded in transcript? Yes.\n   - No invented facts? Checked.\n   - Precise on numbers/times? Yes (5:00/5:30, 6:15/6:20, 7:00, 9:08, 10 mins meditation, 1 hour prep).\n   - Address both parts of the question (purposes & variations)? Yes.\n\n5.  **Draft Response (Mental Refinement):**\n   Based on the transcript, the participants use their morning time for several distinct purposes, which vary in focus and structure:\n\n   **Speaker 1** uses mornings for a mix of health, leisure, and preparation activities:\n   - **Meditation:** Attempts to meditate for about 10 minutes each morning using an app [06:07].\n   - **Sports & Classes:** Plays golf on some mornings, and on other days goes swimming or attends English classes [06:07, 06:20].\n   - **Work & Event Preparation:** Wakes up around 6:15\u20136:20 AM to allow an hour to get ready for work [01:33]. On weekends, wakes at 7:00 AM specifically to have enough time to eat breakfast and digest properly before a race in Barcelona [00:49, 00:53].\n   - **Routine Checks:** Checks the weather forecast as part of the morning routine [06:20].\n\n   **Speaker 2** focuses more on work demands, event preparation, and relaxation:\n   - **Work Schedule:** Wakes up very early (around 5:00 or 5:30 AM) because they need to work long hours and must start early to make the day work [02:04].\n   - **Race Preparation:** Also mentions waking up early on race days to eat breakfast and digest properly before a 9:08 AM race in Barcelona [00:53].\n   - **Relaxation & Routine:** After waking up, prioritizes a calm start: drinks coffee, showers, and spends time on a terrace overlooking a mountain/natural park to enjoy the forest view, noting it\u2019s pleasant in summer and cozy in winter [02:43].\n\n   **Variations:** While both speakers wake up early for work and a Barcelona race, their morning priorities differ. Speaker 1\u2019s mornings are more activity-driven (meditation, golf, swimming, language classes), whereas Speaker 2\u2019s mornings are structured around work obligations and a slower, reflective routine centered on coffee and nature. Speaker 1 also explicitly checks the weather and attends classes, while Speaker 2 emphasizes the need for a calm, uninterrupted start to manage a heavy workload.\n\n6.  **Final Verification against Transcript:**\n   - [06:07] Speaker 1: meditation 10 mins, golf.\n   - [01:56] Speaker 2/1: 5:00/5:30.\n   - [06:20] Speaker 1: golf, work later, weather forecast, swimming, English classes.\n   - [00:49/00:53] Speaker 1/2: 7 AM weekend, race Barcelona, breakfast/digestion.\n   - [01:33] Speaker 1: 6:15/6:20, 1 hour prep for work.\n   - [02:04] Speaker 2: early riser, work many hours, start early.\n   - [02:43] Speaker 2: coffee, shower, terrace, mountain/park view, summer/winter.\n   All match. No extra info added. Timestamps and speakers correctly attributed. Language is English. Direct and clear. Ready.\u2705\n   Output matches the refined draft.\u2705\n   Proceeds. \n   Self-Correction/Note during thought: I should make sure I don't attribute the race preparation solely to one speaker if both mention it. The transcript shows both Speaker 1 and Speaker 2 discussing the race and breakfast/digestion [00:49-00:57, 00:53-01:10]. I'll clarify that both mention it. Also, ensure timestamps are precise. All good. \n   Output generation. \n   [Output Generation] -> *Proceeds*\n   *(Self-Correction/Verification during drafting)*: \n   Check timestamp [00:53 - 01:10] says Speaker 2 talks about the race. [00:49 - 00:57] says Speaker 1 & 2. I'll attribute carefully.\n   Check [01:33] Speaker 1 says 6:15/6:20.\n   Check [02:04] Speaker 2 says early for work.\n   Check [02:43] Speaker 2 says coffee/terrace.\n   All accurate. I will structure the answer clearly.\u2705\n   Output matches response. \n   [Done.] \n   *Output Generation* (matches the refined draft)\n   \"Based on the provided transcript, the participants use their morning time for several distinct purposes, which vary in focus and structure:\n   \n   **Speaker 1** focuses on a",
+      "passed": true,
+      "score": 0.625
+    },
+    {
+      "id": "Q30",
+      "category": "Cross-Chunk Synthesis",
+      "question": "How does the transcript show that routines can be adapted rather than followed rigidly?",
+      "expected": "Examples include someone changing their morning for a race, someone getting up early for golf, someone varying breakfast, someone occasionally working from home or visiting clients, and someone abandoning breakfast and moving directly to lunch when they wake late.",
+      "generated": "<think>\nHere's a thinking process:\n\n1.  **Analyze User Question:** The user asks: \"How does the transcript show that routines can be adapted rather than followed rigidly?\" based on the provided Spanish audio transcript.\n\n2.  **Scan Transcript for Keywords/Concepts:** I need to look for mentions of routines, flexibility, adaptation, working from home, varying schedules, gym/exercise habits, and personal preferences regarding routines.\n   - [04:29 - 04:53] Speaker 2 mentions a marked routine makes it hard to find a tutor with matching availability. (Not directly about adaptation)\n   - [01:51 - 02:00] Speaker 2 wakes up at 5 AM. (Rigid routine)\n   - [06:33 - 06:51] Speaker 1 checks weather, goes swimming or English classes, grabs office keys. (Some flexibility in activities)\n   - [06:54 - 07:06] Speaker 2 says routine isn't important to them, they are \"anti-routine,\" would love to live without one, do whatever they feel like each moment, wake up at different times. (Strong preference for flexibility/adaptation)\n   - [08:13 - 08:33] Speaker 2 says they like sleeping, need a routine to avoid being late, are methodical, routine is important, but also says they can drop everything and go somewhere if asked. (Shows routine but with flexibility/adaptability)\n   - [08:49 - 09:15] Speaker 2 discusses guilt about mornings, routines depending on personality, creative vs. routine people. (General discussion)\n   - [07:11 - 07:33] Speaker 2 says they can work from home, go to office other days, visit clients, go to projects, so they don't feel a rigid daily routine. They find it hard to get into a routine (e.g., gym/exercise), go when they have time. But acknowledges routine is important for discipline/goals. (Shows adaptation/flexibility in work and exercise)\n   - [07:29 - 08:03] Repeats/continues the gym/work flexibility point.\n\n3.  **Synthesize Findings related to the Question:**\n   The transcript shows routines can be adapted rather than followed rigidly through several examples from Speaker 2:\n   - **Work flexibility:** Speaker 2 mentions they can work from home, go to the office on other days, visit clients, or go to projects, meaning they don't follow a strict \"wake up, office, home\" cycle [07:11 - 07:33].\n   - **Exercise/Gym habits:** They admit it's hard to stick to a strict gym routine and prefer to go whenever they have time, showing a flexible approach to fitness [07:11 - 07:33].\n   - **Anti-routine preference:** Speaker 2 explicitly states they are \"anti-routine\" and would love to wake up at different times and do whatever they feel like in the moment [06:54 - 07:06].\n   - **Balancing structure with spontaneity:** Even though Speaker 2 values routine for punctuality and discipline [08:13 - 08:33], they also note they can drop everything and go somewhere if invited, showing routines don't have to be inflexible [08:13 - 08:33].\n   - **Personality-dependent:** The transcript notes that routine adherence depends on personality, with some people being more creative/less routine-bound [08:49 - 09:15].\n\n4.  **Draft Response (Mental Refinement - English):**\n   Based on the transcript, routines are shown to be adaptable rather than rigid through several key points made by Speaker 2:\n   - **Flexible work schedule:** Speaker 2 explains that their work varies daily\u2014they can work from home, go to the office, visit clients, or attend project sites\u2014so they don't follow a strict daily cycle [07:11 - 07:33].\n   - **Adaptable exercise habits:** They admit they struggle to maintain a strict gym routine and instead go whenever they have time, prioritizing flexibility over rigid scheduling [07:11 - 07:33].\n   - **Preference for spontaneity:** Speaker 2 explicitly describes themselves as \"anti-routine,\" stating they would love to wake up at different times each day and simply do whatever they feel like in the moment [06:54 - 07:06].\n   - **Balancing structure with flexibility:** While Speaker 2 acknowledges that routines help with punctuality and discipline [08:13 - 08:33], they also note that they can easily drop their plans and go somewhere if invited, demonstrating that routines don't have to be inflexible [08:13 - 08:33].\n   - **Personality-driven approach:** The transcript highlights that routine adherence varies by personality, suggesting that some people naturally adapt or avoid strict routines based on their individual traits [08:49 - 09:15].\n   Overall, the speakers illustrate that routines can be tailored to fit personal preferences, work demands, and spontaneous opportunities rather than being followed rigidly.\n\n5.  **Check against Constraints:**\n   - Answer clearly, directly, accurately in English? Yes.\n   - Reference timestamps and speakers? Yes.\n   - If not in transcript, state not specified? N/A (all points are in transcript).\n   - Precise on numbers/times/nuances? Yes.\n   - Grounded strictly in provided context? Yes.\n\n   The response matches all constraints. I will format it clearly. I'll make sure to attribute correctly (all these points are from Speaker 2 based on the transcript labels, though the transcript labels some segments as Speaker 2 repeatedly, I'll stick to what's labeled). I'll double-check the timestamps and content alignment.\n   - [06:54-07:06] Speaker 2: anti-routine, wake up different times, do what I feel like.\n   - [07:11-07:33] Speaker 2: work from home/office/clients/projects, no rigid daily routine, gym when I have time.\n   - [08:13-08:33] Speaker 2: routine important for punctuality/methodical, but can drop everything and go if asked.\n   - [08:49-09:15] Speaker 2: depends on personality, creative vs routine.\n   All align perfectly. I will generate the response.\u2705\n   One minor thing: The transcript labels multiple segments as \"(Speaker 2)\". I will just refer to \"Speaker 2\" as labeled. I'll ensure the tone is direct and analytical. All good. \n   Output matches the drafted response.\u2705\n   Proceed. \n   [Output Generation] -> *Self-Correction/Verification during thought*: \n   Wait, let's verify the exact wording in the transcript for [08:13-08:33]: \"Para m\u00ed s\u00ed, yo soy una persona de rutinas, lo cual no quiere decir que de repente me digan algo, vamos a tal sitio, lo dejo todo y voy.\" This directly supports the \"balance structure with flexibility\" point.\n   For [07:11-07:33]: \"laboralmente puedo trabajar desde casa. Otros d\u00edas voy a la oficina... no me siento esa rutina diaria... me cuesta entrar en una rutina. Por ejemplo, me gustar\u00eda ser m\u00e1s disciplinada con el gimnasio... Normalmente voy al gimnasio cuando tenga tiempo.\" Supports work/exercise flexibility.\n   For [06:54-07:06]: \"soy antirrutina... un d\u00eda levantarme una hora, otro diferente.\" Supports anti-routine/spontaneity.\n   All accurate. I will structure the answer clearly with bullet points referencing timestamps and speakers. No extra fluff. Matches constraints.\u2705\n   Output generation. \n   [Response Text] -> Based on the provided transcript, routines are shown to be adaptable rather than rigid through several examples shared by Speaker 2:\n   - **Flexible work arrangements:** Speaker 2 explains that their work schedule varies daily\u2014they can work from home, go to the office, visit clients, or attend project sites\u2014meaning they don\u2019t follow a strict \"wake up, office, home\" cycle [07:11 - 07:33].\n   - **Adaptable exercise habits:** They admit they struggle to stick to a strict gym routine and instead go whenever they have time, prioritizing flexibility over rigid scheduling [07:11 - 07:33].\n   - **Preference for spontaneity:** Speaker 2 explicitly describes themselves as \"anti-routine,\" stating they would love to wake up at different times each day and simply do whatever they feel like in the moment [06:54 - 07:06].\n   - **Balancing structure with flexibility:** While Speaker 2 acknowledges that routines help with punctuality and discipline [08:13 - 08:33], they also note that they can easily drop their plans and go somewhere if invited, demonstrating that routines don't have to be inflexible [08:13 - 0",
+      "passed": false,
+      "score": 0.2
+    },
+    {
+      "id": "Q31",
+      "category": "Cross-Chunk Synthesis",
+      "question": "Compare the motivations for early rising among at least three different participants.",
+      "expected": "One wakes early because of work/commuting, another because of training plus work, another because of a race, another because of golf, while another maintains an established routine even on holidays.",
+      "generated": "**Motivation\u202f1 \u2013 Training\u202f+\u202fWork (Speaker\u202f1)**  \n- **Timestamp:** 01:58\u202f\u2013\u202f02:08 (Speaker\u202f1, Speaker\u202f2)  \n- **Content:** \u201c\u00bfPor qu\u00e9 tan temprano? **Porque me entreno y tambi\u00e9n voy a trabajar**. Madrugos, s\u00ed, s\u00ed, me levanto temprano.\u201d  \n- **Interpretation:** Speaker\u202f1 gets up early primarily to fit in a training session and to be ready for a job. The early rise is functional \u2013 it allows both exercise and work obligations to be met.\n\n**Motivation\u202f2 \u2013 Race preparation, breakfast and digestion (Speaker\u202f2)**  \n- **Timestamp:** 00:49\u202f\u2013\u202f00:57 (Speaker\u202f1, Speaker\u202f2) and 00:53\u202f\u2013\u202f01:10 (Speaker\u202f2)  \n- **Content:** \u201cHoy ten\u00edamos una carrera aqu\u00ed en Barcelona y **quer\u00edamos levantarnos con tiempo para desayunar bien y hacer bien la digesti\u00f3n**\u2026 Prepararnos para la carrera que empezaba a las 9.\u201d  \n- **Interpretation:** Speaker\u202f2 (and the group he refers to) rises early to ensure enough time for a proper pre\u2011race breakfast, good digestion, and overall preparation for a competition that starts at 9\u202fa.m.\n\n**Motivation\u202f3 \u2013 Habit / routine (Speaker\u202f2)**  \n- **Timestamp:** 01:51\u202f\u2013\u202f02:00 (Speaker\u202f2)  \n- **Content:** \u201cS\u00ed, **que es lo habitual**, s\u00ed. **Me levanto a las cinco**.\u201d  \n- **Interpretation:** For this participant, early rising is simply a habitual part of daily life; the motivation is the established routine rather than a specific activity.\n\n---\n\n### Comparison  \n\n| Participant | Primary Reason for Early Rising | Evidence (timestamp) |\n|-------------|--------------------------------|----------------------|\n| **Speaker\u202f1** | Needs to train and go to work | 01:58\u201102:08 |\n| **Speaker\u202f2 (race\u2011focused)** | Wants enough time for breakfast, digestion, and race preparation | 00:49\u201100:57; 00:53\u201101:10 |\n| **Speaker\u202f2 (habitual)** | Early rise is a regular habit | 01:51\u201102:00 |\n\n- **Overlap:** Both speakers mention \u201cearly\u201d as a conscious choice, but the *why* differs: functional (training\u202f+\u202fwork), event\u2011driven (race preparation), and habitual routine.  \n- **Distinctiveness:** Speaker\u202f1 ties the early hour to personal health and employment, whereas Speaker\u202f2\u2019s race\u2011related motivation is tied to a specific event, and his other comment shows that for him early rising can also be simply a matter of habit.  \n\nNo other participants are identified in the transcript; therefore, the comparison is limited to the two speakers and the two distinct motivations expressed by Speaker\u202f2.",
+      "passed": true,
+      "score": 0.8
+    },
+    {
+      "id": "Q32",
+      "category": "Cross-Chunk Synthesis",
+      "question": "What common theme links the participant who writes down tomorrow's tasks and the participant who checks multiple alarms before sleeping?",
+      "expected": "Both use nighttime preparation to make the following day more organized/predictable.",
+      "generated": "The common theme linking both participants is that they are describing **the last thing they do before going to sleep** as part of their bedtime routine. \n\nThis is directly framed by the question posed at [09:18 - 09:28]: *\"\u00bfcu\u00e1l es la \u00faltima cosa que hac\u00e9is antes de dormir?\"* (What is the last thing you do before sleeping?). In response:\n- **Speaker 1** explains that they write down any pending tasks for the next day the night before so their schedule is clear the following morning [09:44 - 09:56].\n- **Speaker 2** states that checking their multiple alarms to ensure they are all set correctly is the very last thing they do before being able to sleep [11:00 - 11:12].\n\nBoth actions function as final preparatory steps in their respective pre-sleep routines.",
+      "passed": false,
+      "score": 0.0
+    },
+    {
+      "id": "Q33",
+      "category": "Cross-Chunk Synthesis",
+      "question": "What common principle connects routine, preparing a bag the night before, writing tomorrow's tasks down, and checking alarms?",
+      "expected": "Preparing in advance reduces uncertainty and makes the next day easier to manage.",
+      "generated": "Based on the provided transcript, the common principle connecting these habits is establishing **mental order and clarity** to ensure productivity and punctuality. \n\n- **Speaker 1** explains that writing down pending tasks the night before ensures they are clear and organized for the next day [09:44-09:56].\n- **Speaker 2** describes having a set routine as creating an *\"orden mental\"* (mental order) that provides the security of knowing exactly what to do, which makes them more productive and helps them avoid being late [07:59-08:17].\n\nPlease note that the provided transcript **does not mention** preparing a bag the night before or checking alarms, so those specific habits are not specified in the context. The connecting principle for the habits that *are* discussed is using preparation and routine to create mental structure and certainty for the day ahead.",
+      "passed": true,
+      "score": 0.6666666666666666
+    },
+    {
+      "id": "Q34",
+      "category": "Cross-Chunk Synthesis",
+      "question": "How does the transcript contrast intentional preparation before sleep with potentially disruptive phone use?",
+      "expected": "Some participants prepare for the next day by organizing the kitchen, writing tasks, or checking alarms, while another admits using the phone despite knowing blue light may interfere with sleep.",
+      "generated": "Based on the provided transcript, the contrast is drawn between a deliberate, organizing wind-down routine and a counterproductive screen habit:\n\n* **Intentional Preparation:** Speaker 1 describes a structured pre-sleep routine that includes brushing teeth, tidying the kitchen, and writing down pending tasks for the next day. This practice is intentionally done to create a clear, organized mindset so the following day starts smoothly `[09:44 - 09:56]`.\n* **Disruptive Phone Use:** In contrast, Speaker 2 admits to staying on their phone before bed (checking news or YouTube), openly acknowledging it's a habit they \"shouldn't\" do `[10:23 - 10:36]`, `[10:32 - 10:43]`. Speaker 1 explains why this is disruptive: the blue light from screens stimulates parts of the brain that should remain inactive in the hours leading up to sleep, thereby interfering with the natural physiological wind-down process `[10:39 - 10:49]`.\n\nThe transcript thus contrasts a proactive, mentally clarifying routine that supports rest with a passive, cognitively stimulating screen habit that actively works against the brain's preparation for sleep.",
+      "passed": true,
+      "score": 0.8333333333333334
+    },
+    {
+      "id": "Q35",
+      "category": "Speaker Attribution",
+      "question": "Who introduces the idea that routine may depend on personality, and what qualification do they make?",
+      "expected": "Speaker 2 introduces the idea, suggesting personality may influence routine preference; they acknowledge that the creative-versus-scientific distinction may be a clich\u00e9.",
+      "generated": "Speaker 2 introduces the idea that routine depends on personality [08:49\u201309:22]. They qualify it by suggesting that more creative individuals might be less routine-oriented, while more \"scientific\" people might need routines more, but they immediately note that this is a bit of a clich\u00e9 and admit they aren't certain if it might actually be the other way around.",
+      "passed": true,
+      "score": 1.0
+    },
+    {
+      "id": "Q36",
+      "category": "Speaker Attribution",
+      "question": "Who describes themselves explicitly as 'anti-routine,' and what lifestyle would they prefer?",
+      "expected": "Speaker 2; they say they would prefer being able to do whatever they feel like at each moment and wake at different times each day.",
+      "generated": "Based on the provided transcript, **Speaker 2** explicitly describes themselves as \"anti-routine\" (*antirrutina*) [06:54]. They would prefer a lifestyle with **no fixed routine at all**, where they can simply do whatever they feel like in each moment and wake up at different times on different days [06:54 - 07:06].",
+      "passed": true,
+      "score": 1.0
+    },
+    {
+      "id": "Q37",
+      "category": "Speaker Attribution",
+      "question": "Who explains that routine can provide a kind of 'mental order,' and what benefit do they associate with getting up early?",
+      "expected": "Speaker 2; they associate routine with mental order/security and say getting up early makes them feel more productive because they have more hours available to work.",
+      "generated": "Based on the transcript, **Speaker 2** explains that routine acts as a kind of \"mental order\" [07:59]. They associate getting up early with **increased productivity**, specifically noting that it gives them more hours available to work and provides a consistent sense of certainty about their daily actions [07:59 - 08:17].",
+      "passed": true,
+      "score": 0.75
+    },
+    {
+      "id": "Q38",
+      "category": "Speaker Attribution",
+      "question": "Who discusses the blue-light problem associated with using a phone before bed, and why do they continue using it?",
+      "expected": "Speaker 2; they know blue light can keep parts of the brain active before sleep, acknowledge they shouldn't use the phone, but admit they still do.",
+      "generated": "Based on the transcript, **Speaker 2** discusses the blue-light problem. They explain that blue light \"wakes up certain parts of the brain that shouldn't be so active in the hours leading up to sleep\" [10:39\u201310:49]. \n\nDespite knowing they shouldn't, Speaker 2 continues using their phone for two main reasons:\n1. To casually browse or watch content like YouTube [10:32\u201310:43].\n2. To check their alarms and verify they are set correctly, which they admit is the very last thing they do before trying to fall asleep [10:45\u201311:04].",
+      "passed": true,
+      "score": 1.0
+    },
+    {
+      "id": "Q39",
+      "category": "Negative / Trick",
+      "question": "What exact number of minutes does the transcript say the participant spends meditating every morning?",
+      "expected": "Approximately 10 minutes.",
+      "generated": "Based on the provided transcript, Speaker 1 states that they spend about **10 minutes** meditating every morning using an app [06:07 - 06:24].",
+      "passed": true,
+      "score": 0.6666666666666666
+    },
+    {
+      "id": "Q40",
+      "category": "Negative / Trick",
+      "question": "What exact number of cups of coffee does the participant who says 'Sin caf\u00e9 no puedo vivir' drink every morning?",
+      "expected": "The transcript does not specify how many cups that particular participant drinks. Another participant separately says they drink two cups every morning.",
+      "generated": "Based on the provided transcript, Speaker 2, who says \"Sin caf\u00e9 no puedo vivir\" [02:51], drinks exactly **two cups** of coffee every morning [03:12].",
+      "passed": true,
+      "score": 0.6666666666666666
+    },
+    {
+      "id": "Q41",
+      "category": "Killer Questions",
+      "question": "A participant says they wake early because of work, while another says they wake early because of exercise. Are these statements describing the same person? Explain.",
+      "expected": "No. They refer to different interviewees.",
+      "generated": "No, these statements describe **two different people**. According to the transcript:\n\n* **Speaker 2** explicitly states they wake up early because of work, explaining that they need to work many hours and must start early to be productive and make the day count ([02:04 - 02:16], [07:59 - 08:17]).\n* **Speaker 1** explains that they wake up early on certain days specifically to exercise (play golf or go swimming), and then go to work afterward ([06:20 - 06:37]).\n\nWhile both participants mention both work and exercise in the broader conversation, their stated primary",
+      "passed": true,
+      "score": 1.0
+    },
+    {
+      "id": "Q42",
+      "category": "Killer Questions",
+      "question": "Which participant's coffee habit is explicitly associated with sitting outside and looking at a natural environment?",
+      "expected": "The participant who prepares coffee and sits on the terrace looking toward the forest/natural park.",
+      "generated": "The coffee habit that is linked to sitting outside and looking at a natural setting is described by **Speaker\u202f2**.  \n\n- At **[02:43\u202f\u2013\u202f02:55]** and again at **[02:51\u202f\u2013\u202f03:16]**, Speaker\u202f2 says: \u201c*La primera cosa que hago es ir a la cocina prepararme un caf\u00e9, salir a la terraza\u2026 delante de la monta\u00f1a en un parque natural y me pongo mirando el bosque y me tomo mi caf\u00e9*,\u201d explicitly connecting the coffee routine with being on the terrace, facing a mountain and forest.  \n\nNo other participant\u2019s description ties coffee consumption to an outdoor, natural environment.",
+      "passed": true,
+      "score": 1.0
+    },
+    {
+      "id": "Q43",
+      "category": "Killer Questions",
+      "question": "Did the person who says they are 'anti-routine' nevertheless acknowledge any benefit of routine?",
+      "expected": "Yes. Later they say routine can be important for discipline when pursuing a goal over a period of months.",
+      "generated": "Yes. Although Speaker 2 initially describes themselves as \"anti-routine\" at [06:54], they later acknowledge specific benefits. At [07:29], Speaker 2 explicitly states that they consider routine important for establishing discipline, particularly when working toward a specific goal, and adds that it ultimately provides a sense of mental order.",
+      "passed": true,
+      "score": 1.0
+    },
+    {
+      "id": "Q44",
+      "category": "Killer Questions",
+      "question": "What does the transcript imply about the relationship between sleeping late and meal timing?",
+      "expected": "One participant tries not to let meal times shift when they wake late; if they wake very late, they may skip breakfast and go directly to lunch.",
+      "generated": "Based on the transcript, Speaker 1 implies that waking up late after staying up late should not cause a person to shift their meal times later in the day. Instead, they try to keep their eating schedule as consistent as possible. If they wake up too late for breakfast, they prefer to skip it and go straight to lunch. Speaker 1 emphasizes that if meal times start running late, it disrupts the entire daily routine and causes \"everything to go wrong\" [05:42 - 06:11].",
+      "passed": true,
+      "score": 1.0
+    },
+    {
+      "id": "Q45",
+      "category": "Killer Questions",
+      "question": "Which statement is better supported: 'Routine always improves productivity' or 'Routine can improve productivity for some people'?",
+      "expected": "The second. The transcript gives individual opinions and explicitly presents routine preference as dependent on the person.",
+      "generated": "The statement **\"Routine can improve productivity for some people\"** is better supported by the transcript.\n\nSpeaker 2 explicitly states that the effectiveness of a routine depends on individual personality, noting that while they personally feel \"a bit more productive\" when they wake up early and follow a set schedule [07:59-08:17], they also acknowledge that \"it depends on each person's personality\" [09:11-09:22]. They elaborate that more creative individuals may be less routine-oriented, whereas methodical people thrive on structure [08:13-08:33, 08:49-09:15]. Additionally, Speaker 2 admits they personally struggle to maintain routines in certain areas, like going to the gym [07:29-08:03]. \n\nThis nuanced perspective directly contradicts the absolute claim that routine \"always\" improves productivity, making the conditional statement the accurate one based on the provided context.",
+      "passed": true,
+      "score": 0.6666666666666666
+    },
+    {
+      "id": "Q46",
+      "category": "Killer Questions",
+      "question": "What is the earliest time mentioned in the entire transcript, and what context does it occur in?",
+      "expected": "5:00 AM, in the discussion of someone waking early because they train and work.",
+      "generated": "The earliest time mentioned in the transcript is **5:00 AM**. \n\nIt occurs at **[01:51 - 02:02]** during a discussion about daily morning routines. **Speaker 2** states that they usually wake up at 5:00 AM (\"Me levanto a las cinco\"), and **Speaker 1** confirms this time (also noting 5:30 AM) while asking why they wake up so early (\"\u00bfPor qu\u00e9 tan temprano?\").",
+      "passed": true,
+      "score": 1.0
+    },
+    {
+      "id": "Q47",
+      "category": "Killer Questions",
+      "question": "What is the latest wake-up time explicitly mentioned, and why was that person able to sleep that late?",
+      "expected": "10:00 AM; it was Saturday/a weekend and the person could sleep in.",
+      "generated": "Based on the provided transcript, the latest wake-up time explicitly mentioned is **10:00 AM**. According to Speaker 1 at **[00:30 - 00:43]**, they were able to sleep that late because it was **Saturday** (the weekend), which allowed them to rest more (\"Hoy me levant\u00e9 a las 10 de la ma\u00f1ana, s\u00e1bado pude dormir, s\u00ed\").",
+      "passed": true,
+      "score": 1.0
+    },
+    {
+      "id": "Q48",
+      "category": "Killer Questions",
+      "question": "Did the transcript establish that creative people are less routine-oriented than scientific people?",
+      "expected": "No. The speakers speculate about that possibility and explicitly frame it as potentially clich\u00e9; it is not established as fact.",
+      "generated": "No. The transcript does not provide a definitive statement that creative people are less routine\u2011oriented than scientific people.  \n\n- At **[09:11\u202f\u2013\u202f09:22]** (Speaker\u202f2, Speaker\u202f1) the speakers say, \u201c\u2026personas m\u00e1s cient\u00edficas que\u2026 necesitan una rutina, o a lo mejor es al rev\u00e9s, no lo s\u00e9\u2026\u201d, indicating uncertainty about whether scientific people need more routine.  \n- At **[08:49\u202f\u2013\u202f09:15]** (Speaker\u202f2) they add, \u201cHabr\u00eda gente a lo mejor creativa que\u2026 es menos rutinaria\u2026\u201d, again phrasing it as a possibility (\u201ca lo mejor\u201d) rather than a confirmed fact.\n\nBoth passages are speculative (\u201cmaybe\u201d, \u201cI don\u2019t know\u201d), so the transcript does not establish a clear relationship between creativity and routine orientation.",
+      "passed": false,
+      "score": 0.3333333333333333
+    },
+    {
+      "id": "Q49",
+      "category": "Killer Questions",
+      "question": "What are three different examples of people preparing for the next day before going to sleep?",
+      "expected": "Examples include preparing a bag the night before, writing down pending tasks for the next day, and checking that multiple alarms are correctly set.",
+      "generated": "Three distinct ways the speakers said they get ready for the next day before they fall asleep are:\n\n1. **Writing down the next\u2011day\u2019s tasks** \u2013 Speaker\u202f1 explains that if she has pending tasks she \u201ctries to write them down the night before so the next day they\u2019re clear\u201d\u301009:52\u201110:09\u3011.  \n\n2. **Laying out work clothes and packing a bag** \u2013 Speaker\u202f2 describes getting out of bed, changing out of pajamas, putting on work clothes, and then \u201cpreparing the backpack for work\u201d as part of the pre\u2011sleep routine\u301002:12\u201102:25\u3011.  \n\n3. **Checking the alarm clocks** \u2013 Speaker\u202f2 also says the very last thing she does before she can actually sleep is \u201clook at the alarms\u2026 to make sure they\u2019re all set correctly\u201d\u301011:00\u201111:12\u3011.  \n\n(Other examples in the transcript include cleaning the kitchen before bed\u301009:44\u201109:56\u3011, but the three items above satisfy the request for three different preparations.)",
+      "passed": true,
+      "score": 1.0
+    },
+    {
+      "id": "Q50",
+      "category": "Killer Questions",
+      "question": "What is the strongest evidence that the transcript does not portray routine as universally desirable?",
+      "expected": "One participant explicitly says they are 'anti-routine,' wishes they could have no routine, and prefers deciding what to do spontaneously.",
+      "generated": "The transcript\u2019s clearest indication that routine is **not presented as universally desirable** comes from Speaker\u202f2\u2019s explicit anti\u2011routine statements.  \n\n- **[06:54\u202f\u2013\u202f07:06] (Speaker\u202f2):** \u201cPara m\u00ed la rutina no es importante, al contrario, soy antirrutina. Si yo pudiera vivir sin ninguna rutina me encantar\u00eda\u2026\u201d.  \n- **[06:47\u202f\u2013\u202f06:58] (Speaker\u202f1\u202f&\u202fSpeaker\u202f2):** After the question \u201c\u00bfPara ti es importante tener una rutina\u2026?\u201d Speaker\u202f2 repeats, \u201cPara m\u00ed la rutina no es importante, al contrario, soy antirrutina.\u201d  \n\nThese passages directly convey that, for at least one participant, routine is **unwanted** and even undesirable, contradicting any notion that the discussion treats routine as universally beneficial. The speaker\u2019s personal preference for \u201cno routine\u201d serves the strongest evidence that the transcript does not portray routine as universally desirable.",
+      "passed": true,
+      "score": 0.6666666666666666
+    }
+  ]
+}

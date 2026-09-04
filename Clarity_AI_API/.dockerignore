@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.log
+.venv/
+venv/
+.git/
+.DS_Store
+.pytest_cache/
+.mypy_cache/
+.vscode/
+*.sqlite3
+benchmark_results*.json
+BENCHMARK_RESULTS*.md
