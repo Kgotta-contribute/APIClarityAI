@@ -1,12 +1,41 @@
+import os
 import uvicorn
 from pathlib import Path
-from fastapi import FastAPI, UploadFile, File, HTTPException
+from fastapi import FastAPI, UploadFile, File, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, JSONResponse
 from app.api import health, jobs
 from app.services.local_store import ensure_storage
+from app.config.config import settings
 
 app = FastAPI(title="Clarity AI API")
+
+# Global exception handler to guarantee CORS headers on any error
+@app.exception_handler(Exception)
+async def global_exception_handler(request: Request, exc: Exception):
+    return JSONResponse(
+        status_code=500,
+        content={"detail": str(exc)},
+        headers={
+            "Access-Control-Allow-Origin": request.headers.get("origin") or "*",
+            "Access-Control-Allow-Credentials": "true",
+            "Access-Control-Allow-Methods": "*",
+            "Access-Control-Allow-Headers": "*",
+        },
+    )
+
+@app.exception_handler(HTTPException)
+async def http_exception_handler(request: Request, exc: HTTPException):
+    return JSONResponse(
+        status_code=exc.status_code,
+        content={"detail": exc.detail},
+        headers={
+            "Access-Control-Allow-Origin": request.headers.get("origin") or "*",
+            "Access-Control-Allow-Credentials": "true",
+            "Access-Control-Allow-Methods": "*",
+            "Access-Control-Allow-Headers": "*",
+        },
+    )
 
 # Absolute path to sample test files directory
 SAMPLE_FILES_DIR = Path(__file__).resolve().parents[1] / "data" / "sample_files"
@@ -21,18 +50,27 @@ ALLOWED_SAMPLE_FILES = {
 def startup() -> None:
     ensure_storage()
 
-# Enable CORS for frontend applications (typically on localhost:5173, 5174, etc.)
+# Enable CORS for frontend applications
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Allows all origins in development
+    allow_origins=["*"],
     allow_credentials=True,
-    allow_methods=["*"],  # Allows all methods (GET, POST, etc.)
-    allow_headers=["*"],  # Allows all headers
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 # Include the specific routers
 app.include_router(health.router, tags=["Health"])
 app.include_router(jobs.router, tags=["Jobs"])
+
+@app.get("/debug-env")
+def debug_env():
+    return {
+        "has_database_url": bool(settings.database_url or os.getenv("DATABASE_URL")),
+        "has_groq_key": bool(settings.groq_api_key or os.getenv("GROQ_API_KEY")),
+        "has_supabase_url": bool(settings.supabase_url or os.getenv("SUPABASE_URL")),
+        "has_supabase_key": bool(settings.supabase_key or os.getenv("SUPABASE_KEY")),
+    }
 
 @app.get("/")
 def read_root():

@@ -168,17 +168,27 @@ def cleanup_old_files(max_files: int = 20) -> None:
 
 def get_visitor_count() -> int:
     ensure_storage()
-    with engine.begin() as conn:
-        result = conn.execute(text("SELECT stat_value FROM visitor_stats WHERE stat_key = 'visits'")).fetchone()
-        return result[0] if result else 1024
+    if not engine:
+        return 1024
+    try:
+        with engine.begin() as conn:
+            result = conn.execute(text("SELECT stat_value FROM visitor_stats WHERE stat_key = 'visits'")).fetchone()
+            return result[0] if result else 1024
+    except Exception:
+        return 1024
 
 
 def increment_visitor_count() -> int:
     ensure_storage()
-    with engine.begin() as conn:
-        conn.execute(text("UPDATE visitor_stats SET stat_value = stat_value + 1 WHERE stat_key = 'visits';"))
-        result = conn.execute(text("SELECT stat_value FROM visitor_stats WHERE stat_key = 'visits'")).fetchone()
-        return result[0] if result else 1025
+    if not engine:
+        return 1025
+    try:
+        with engine.begin() as conn:
+            conn.execute(text("UPDATE visitor_stats SET stat_value = stat_value + 1 WHERE stat_key = 'visits';"))
+            result = conn.execute(text("SELECT stat_value FROM visitor_stats WHERE stat_key = 'visits'")).fetchone()
+            return result[0] if result else 1025
+    except Exception:
+        return 1025
 
 
 def row_to_dict(row: Any) -> dict[str, Any]:
@@ -189,6 +199,8 @@ def row_to_dict(row: Any) -> dict[str, Any]:
 
 def create_job(file_names: list[str], business_group: str, options: dict[str, Any]) -> dict[str, Any]:
     ensure_storage()
+    if not engine:
+        raise ValueError("DATABASE_URL environment variable is not configured. Please add DATABASE_URL in Railway -> Variables.")
     cleanup_old_files(max_files=20)
     job_id = f"JOB-{uuid.uuid4().hex[:12].upper()}"
     created_at = utc_now()
