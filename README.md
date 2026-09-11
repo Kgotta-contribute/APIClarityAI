@@ -11,7 +11,7 @@
 - **Two-Stage Dense Multilingual RAG**:
   - **Stage 1 (Dense Recall)**: 1,024-dimensional multilingual embeddings using `BAAI/bge-m3` combined with sliding-window dialogue chunks (Top 20 candidates).
   - **Stage 2 (Cross-Encoder Precision)**: Full cross-attention query-passage reranking via `BAAI/bge-reranker-v2-m3` selecting the Top 10 high-precision chunks for LLM context.
-- **Multi-Model LLM Routing & Failover**: Primary multilingual comprehension with **Qwen 3.8 (27B)** across Kannada, Japanese, Russian, Hindi, Greek, Spanish, and English with automatic circuit-breaker failover to **GPT-OSS (20B/120B)** on HTTP 429 rate limits.
+- **Multi-Model LLM Routing & Failover**: Primary multilingual comprehension with **Qwen 3.8 (27B)** across 90+ languages (including Kannada, Japanese, Russian, Hindi, Greek, Spanish, and English) with automatic circuit-breaker failover to **GPT-OSS (20B/120B)** on HTTP 429 rate limits.
 - **Thread-Safe Rate Limiting**: In-memory, proxy-aware (`X-Forwarded-For`) sliding-window rate limiter (2 req/60s/IP) with exact `Retry-After` calculation.
 - **100% Benchmark Accuracy**: Evaluated on multi-domain benchmarks achieving **100.0% Pass Rate (50/50 PASS)** with zero hallucinations and exact timecode citations.
 - **Railway Serverless Ready**: Configured for scale-to-zero serverless deployment to optimize compute costs during inactivity.
@@ -155,3 +155,4 @@ docker run -p 8080:8080 -e GROQ_API_KEY="your_groq_api_key" clarity-ai-api
 | **Biological & Anatomical Inference** | 55.0% | **100.0%** | **+45.0 pp** |
 | **Multilingual Entity Grounding** | 55.0% | **100.0%** | **+45.0 pp** |
 | **Overall Benchmark (50 Questions)** | **55.0%** | **100.0% (50/50 PASS)** | **+45.0 pp** |
+
